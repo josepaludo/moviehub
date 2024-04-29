@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import env from "./env";
 import axios from "axios";
 import { BASE_API_URL } from "./constants";
-import { TEST_CREDITS, TEST_GENRES_RESPONSE, TEST_MOVIE_INFO, TEST_MOVIES_RESPONSE } from "./test";
+import { MOCK_CREDITS, MOCK_GENRES_RESPONSE, MOCK_MOVIE_INFO, MOCK_MOVIES_RESPONSE } from "./mock";
 import { TCredits, TMovieInfo } from "./types";
 
 
@@ -18,7 +18,7 @@ export async function featuredMoviesRoute(request: Request, response: Response) 
     console.log("URL: ", url)
     console.log()
 
-    return response.send(TEST_MOVIES_RESPONSE)
+    return response.send(MOCK_MOVIES_RESPONSE)
     // return response.send(await moviesApiCall(url))
 };
 
@@ -39,7 +39,7 @@ export async function moviesByGenreRoute(request: Request, response: Response) {
     console.log("URL: ", url)
     console.log()
 
-    return response.send(TEST_MOVIES_RESPONSE)
+    return response.send(MOCK_MOVIES_RESPONSE)
     // return response.send(await moviesApiCall(url))
 }
 
@@ -57,13 +57,13 @@ export async function findMovieRoute(request: Request, response: Response) {
     console.log("URL: ", url)
     console.log()
 
-    return response.send(TEST_MOVIES_RESPONSE)
+    return response.send(MOCK_MOVIES_RESPONSE)
     // return response.send(await moviesApiCall(url))
 }
 
 export async function genresRoute(request: Request, response: Response) {
 
-    return response.send(TEST_GENRES_RESPONSE)
+    return response.send(MOCK_GENRES_RESPONSE)
 
     const url = BASE_API_URL + "/genre/movie/list?api_key=" + env.TMDB_API_KEY 
 

@@ -1,5 +1,5 @@
 
-export const TEST_MOVIES_RESPONSE = [
+export const MOCK_MOVIES_RESPONSE = [
   {
     posterUrl: 'https://image.tmdb.org/t/p/w300/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg',
     title: 'Road House',
@@ -122,7 +122,7 @@ export const TEST_MOVIES_RESPONSE = [
   }
 ]
 
-export const TEST_GENRES_RESPONSE = {
+export const MOCK_GENRES_RESPONSE = {
     genres: [
         { id: 28, name: 'Action' },
         { id: 12, name: 'Adventure' },
@@ -146,7 +146,7 @@ export const TEST_GENRES_RESPONSE = {
     ]
 }
 
-export const TEST_MOVIE_INFO = {
+export const MOCK_MOVIE_INFO = {
     adult: false,
     backdrop_path: '/oe7mWkvYhK4PLRNAVSvonzyUXNy.jpg',
     belongs_to_collection: null,
@@ -189,7 +189,7 @@ export const TEST_MOVIE_INFO = {
 
 }
 
-export const TEST_CREDITS = {
+export const MOCK_CREDITS = {
     cast: [
         {
             adult: false,
