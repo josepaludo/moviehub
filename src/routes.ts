@@ -6,6 +6,7 @@ import { MOCK_CREDITS, MOCK_GENRES_RESPONSE, MOCK_MOVIE_INFO, MOCK_MOVIE_PAGE_RE
 import { Jobs, JobsList, TCast, TCastRaw, TCredits, TCrew, TCrewRaw, TMovieInfo, TMovieInfoRaw, TMoviePageResponse } from "./types";
 import { moviesApiCall } from "./functions";
 import util from "util"
+import fs from"fs"
 
 
 export async function featuredMoviesRoute(request: Request, response: Response) {
@@ -102,19 +103,27 @@ export async function movieDetailsRoute(request: Request, response: Response) {
     const query = request.query
     const movieId = query.movie_id
 
-    const urlMovieInfo = `${BASE_API_URL}/movie/${movieId}?api_key=${env.TMDB_API_KEY}`
-    const urlCredits = `${BASE_API_URL}/movie/${movieId}/credits?api_key=${env.TMDB_API_KEY}`
+    const url = `${BASE_API_URL}/movie/${movieId}?append_to_response=credits&api_key=${env.TMDB_API_KEY}`
+    // const urlMovieInfo = `${BASE_API_URL}/movie/${movieId}?append_to_response=credits&api_key=${env.TMDB_API_KEY}`
+    // const urlCredits = `${BASE_API_URL}/movie/${movieId}/credits?api_key=${env.TMDB_API_KEY}`
 
+    // const responseData = await axios
+    //     .all([
+    //         axios.get(urlMovieInfo),
+    //         axios.get(urlCredits)
+    //     ])
+    //     .then(axios.spread((res1, res2) => {
+    
     const responseData = await axios
-        .all([
-            axios.get(urlMovieInfo),
-            axios.get(urlCredits)
-        ])
-        .then(axios.spread((res1, res2) => {
+        .get(url)
+        .then(res => {
 
-            const crewRaw = res2.data.crew as Array<TCrewRaw>
-            const castRaw = res2.data.cast as Array<TCastRaw>
-            const movieInfoRaw = res1.data as TMovieInfoRaw
+            // const daaaata = util.inspect(res1.data, false, null, true)
+            // console.log(daaaata)
+
+            const crewRaw = res.data.credits.crew as Array<TCrewRaw>
+            const castRaw = res.data.credits.cast as Array<TCastRaw>
+            const movieInfoRaw = res.data as TMovieInfoRaw
 
             const crew: Array<TCrew> = crewRaw
                 .filter(crew =>
@@ -170,10 +179,9 @@ export async function movieDetailsRoute(request: Request, response: Response) {
             }
 
             return data
-        }))
-        .catch(err => {console.log(err)})
+        })
+        .catch(err => { console.log("ERROR: ", err)})
 
-    // console.log(util.inspect(responseData, false, null, true))
     
     response.send(responseData)
 }
