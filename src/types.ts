@@ -30,6 +30,8 @@ export type TMovieType = {
     title: string;
     date: Date;
     id: number;
+    backdropPath?: string
+
 }
 
 export type TGenre = {
@@ -43,7 +45,7 @@ export type TGenreResponse = {
 
 export type TFeaturedMoviesResponse = Array<TMovieType>
 
-export type TMovieInfo = {
+export type TMovieInfoRaw = {
     adult: boolean;
     backdrop_path: string;
     belongs_to_collection: null | {
@@ -82,7 +84,7 @@ export type TMovieInfo = {
     vote_count: number;
 }
 
-export type TCast = {
+export type TCastRaw = {
     adult: boolean;
     cast_id: number;
     character: string;
@@ -97,7 +99,7 @@ export type TCast = {
     profile_path: string | null;
 }
 
-export type TCrew = {
+export type TCrewRaw = {
     adult: boolean;
     credit_id: string;
     department: string;
@@ -111,7 +113,61 @@ export type TCrew = {
     profile_path: string | null;
 }
 
+export type TMoviePageResponse = {
+    credits: TCredits,
+    movieInfo: TMovieInfo
+}
+
 export type TCredits = {
     crew: Array<TCrew>,
     cast: Array<TCast>
 }
+
+export type TCast = {
+    id: number;
+    character: string;
+    name: string;
+    profile_path: string | null;
+}
+
+export type TCrew = {
+    id: number;
+    job: string;
+    name: string;
+    profile_path: string | null;
+}
+
+export type TMovieInfo = {
+    backdrop_path: string;
+    budget: number;
+    genres: { id: number; name: string }[];
+    id: number;
+    overview: string;
+    poster_path: string;
+    production_companies: {
+        id: number;
+        logo_path: string | null;
+        name: string;
+        origin_country: string;
+    }[];
+    release_date: string;
+    revenue: number;
+    runtime: number;
+    title: string;
+    vote_average: number;
+
+    // homepage: string;
+    // status: string;
+}
+
+export enum Jobs {
+    Director = "Director",
+    Screenplay = "Screenplay",
+    Producer = "Producer"
+}
+
+export const JobsList = [
+    Jobs.Director,
+    Jobs.Producer,
+    Jobs.Screenplay,
+]
