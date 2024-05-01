@@ -8,6 +8,8 @@ import { TokenSingleton } from "../common/singletons";
 import { Job } from "../common/enums";
 import fs from "fs"
 import { printPretty } from "../utils/utils_functions";
+//@ts-ignore
+import queryString from 'query-string';
 
 
 export async function featuredMoviesController(request: Request, response: Response) {
@@ -209,6 +211,58 @@ export async function getSongController(request: Request, response: Response) {
 }
 
 export async function testWikiController(request: Request, response: Response) {
+
+    const tokenSingleton = new TokenSingleton()
+    const token = await tokenSingleton.getToken()
+
+    const track = "Crazy Train"
+    const artist = "Ozzy Osbourne"
+
+    const query = queryString.stringify({
+        q: `track:${track} artist:${artist}`,
+        type: "track"
+    })
+
+    const url = "https://api.spotify.com/v1/search?"+query
+    console.log(url)
+
+    const data: Array<TTrack> = await axios
+        .get(url, {
+            headers: {
+                "Authorization": token
+            }
+        })
+        .then((res) => {
+
+            const tracks: Array<TTrackRaw> = res.data.tracks.items
+
+            return tracks.slice(0, 1).map(
+                song => ({
+                    external_urls: { ...song.external_urls },
+                    artists: song.artists.map(
+                        artist => ({
+                            external_urls: { ...artist.external_urls },
+                            name: artist.name
+                        })),
+                    album: {
+                        ...song.album,
+                        images: song.album.images.slice(0, 1)
+                    },
+                    name: song.name,
+                    preview_url:song.preview_url
+                })
+            )
+
+        })
+        .catch(err => {
+            console.log(err)
+            return []
+        })
+    
+    response.send(data)
+}
+
+export async function _testWikiController(request: Request, response: Response) {
     response.send("")
     return
 
