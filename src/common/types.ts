@@ -1,3 +1,6 @@
+import { Request, Response } from "express"
+import { ApiRoute } from "../api/routes"
+
 
 export type TResult = {
     backdrop_path: string
@@ -160,14 +163,10 @@ export type TMovieInfo = {
     // status: string;
 }
 
-export enum Jobs {
-    Director = "Director",
-    Screenplay = "Screenplay",
-    Producer = "Producer"
+export type TokenType = {
+    access_token: string
+    expires_in: number
+    token_type: string
 }
 
-export const JobsList = [
-    Jobs.Director,
-    Jobs.Producer,
-    Jobs.Screenplay,
-]
+

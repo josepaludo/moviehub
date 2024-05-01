@@ -1,19 +1,15 @@
 import { Request, Response } from "express";
-import env from "./env";
+import env from "../common/env";
 import axios from "axios";
-import { BASE_API_URL, POSTER_LG_BASE_URL, POSTER_MD_BASE_URL, POSTER_ORIGINAL_BASE_URL, PROFILE_SM_BASE_URL } from "./constants";
-import { MOCK_CREDITS, MOCK_GENRES_RESPONSE, MOCK_MOVIE_INFO, MOCK_MOVIE_PAGE_RESPONSE, MOCK_MOVIES_RESPONSE } from "./mock";
-import { Jobs, JobsList, TCast, TCastRaw, TCredits, TCrew, TCrewRaw, TMovieInfo, TMovieInfoRaw, TMoviePageResponse } from "./types";
-import { moviesApiCall } from "./functions";
-import util from "util"
-import fs from"fs"
+import { BASE_API_URL, IMG_LG_BASE_URL, IMG_ORIGINAL_BASE_URL, IMG_SM_BASE_URL, JOBS_LIST } from "../common/constants";
+import { TCast, TCastRaw, TCrew, TCrewRaw, TMovieInfo, TMovieInfoRaw, TMoviePageResponse } from "../common/types";
+import { moviesApiCall } from "./api_functions";
+import { TokenSingleton } from "../common/singletons";
+import { Job } from "../common/enums";
 
 
-export async function featuredMoviesRoute(request: Request, response: Response) {
 
-    if (env.MOCK) {
-        return response.send(MOCK_MOVIES_RESPONSE)
-    }
+export async function featuredMoviesController(request: Request, response: Response) {
 
     const query = request.query
     const page = query.page ? query.page : 1 
@@ -29,11 +25,7 @@ export async function featuredMoviesRoute(request: Request, response: Response) 
     return response.send(responseData)
 };
 
-export async function moviesByGenreRoute(request: Request, response: Response) {
-
-    if (env.MOCK) {
-        return response.send(MOCK_MOVIES_RESPONSE)
-    }
+export async function moviesByGenreController(request: Request, response: Response) {
 
     const query = request.query
 
@@ -53,11 +45,7 @@ export async function moviesByGenreRoute(request: Request, response: Response) {
     return response.send(await moviesApiCall(url))
 }
 
-export async function findMovieRoute(request: Request, response: Response) {
-
-    if (env.MOCK) {
-        return response.send(MOCK_MOVIES_RESPONSE)
-    }
+export async function findMovieController(request: Request, response: Response) {
 
     const query = request.query
     const page = query.page ? query.page : 1
@@ -75,11 +63,7 @@ export async function findMovieRoute(request: Request, response: Response) {
     return response.send(responseData)
 }
 
-export async function genresRoute(request: Request, response: Response) {
-
-    if (env.MOCK) {
-        return response.send(MOCK_GENRES_RESPONSE)
-    }
+export async function genresController(request: Request, response: Response) {
 
     const url = BASE_API_URL + "/genre/movie/list?api_key=" + env.TMDB_API_KEY 
 
@@ -94,11 +78,7 @@ export async function genresRoute(request: Request, response: Response) {
     response.send(responseData)
 }
 
-export async function movieDetailsRoute(request: Request, response: Response) {
-
-    if (env.MOCK) {
-        return response.send(MOCK_MOVIE_PAGE_RESPONSE)
-    }
+export async function movieDetailsController(request: Request, response: Response) {
 
     const query = request.query
     const movieId = query.movie_id
@@ -118,16 +98,13 @@ export async function movieDetailsRoute(request: Request, response: Response) {
         .get(url)
         .then(res => {
 
-            // const daaaata = util.inspect(res1.data, false, null, true)
-            // console.log(daaaata)
-
             const crewRaw = res.data.credits.crew as Array<TCrewRaw>
             const castRaw = res.data.credits.cast as Array<TCastRaw>
             const movieInfoRaw = res.data as TMovieInfoRaw
 
             const crew: Array<TCrew> = crewRaw
                 .filter(crew =>
-                    JobsList.includes(crew.job as Jobs)
+                    JOBS_LIST.includes(crew.job as Job)
                 )
                 .sort((a, b) => (
                     (a.profile_path && b.profile_path) ? 0 :
@@ -137,7 +114,7 @@ export async function movieDetailsRoute(request: Request, response: Response) {
                     id: crew.id,
                     job: crew.job,
                     name: crew.name,
-                    profile_path: crew.profile_path ? PROFILE_SM_BASE_URL +crew.profile_path : null,
+                    profile_path: crew.profile_path ? IMG_SM_BASE_URL +crew.profile_path : null,
                 }))
                 .reduce((prev, curr) => {
                     const existing = prev.find(crew => crew.id === curr.id) 
@@ -155,15 +132,15 @@ export async function movieDetailsRoute(request: Request, response: Response) {
                     id: cast.id,
                     character: cast.character,
                     name: cast.name,
-                    profile_path: PROFILE_SM_BASE_URL+cast.profile_path,
+                    profile_path: IMG_SM_BASE_URL+cast.profile_path,
                 }))
             
             const movieInfo: TMovieInfo = {
-                backdrop_path: POSTER_ORIGINAL_BASE_URL+movieInfoRaw.backdrop_path,
+                backdrop_path: IMG_ORIGINAL_BASE_URL+movieInfoRaw.backdrop_path,
                 budget: movieInfoRaw.budget,
                 id: movieInfoRaw.id,
                 overview: movieInfoRaw.overview,
-                poster_path: POSTER_LG_BASE_URL+movieInfoRaw.poster_path,
+                poster_path: IMG_LG_BASE_URL+movieInfoRaw.poster_path,
                 release_date: movieInfoRaw.release_date,
                 revenue: movieInfoRaw.revenue,
                 runtime: movieInfoRaw.runtime,
@@ -184,4 +161,27 @@ export async function movieDetailsRoute(request: Request, response: Response) {
 
     
     response.send(responseData)
+}
+
+
+export async function getSongController(request: Request, response: Response) {
+
+    const tokenSingleton = new TokenSingleton()
+    const token = await tokenSingleton.getToken()
+
+    const data = await axios
+        .get(
+            "https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl",
+            {
+                headers: {
+                    "Authorization": token
+                }
+            }
+        )
+        .then(res => res.data)
+        .catch(err => {
+            return { error: true }
+        })
+    
+    response.send(data)
 }

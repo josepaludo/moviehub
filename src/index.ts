@@ -1,17 +1,21 @@
-import { featuredMoviesRoute, findMovieRoute, genresRoute, movieDetailsRoute, moviesByGenreRoute } from "./routes";
 import express from "express";
 import cors from "cors"
-import env from "./env";
+import env from "./common/env";
+import { TokenSingleton } from "./common/singletons";
+import { ApiRoute, CONTROLLERS } from "./api/routes";
 
+
+new TokenSingleton()
 
 const app = express();
 
 app.use(cors())
 
-app.get("/genres", genresRoute)
-app.get("/featured_movies", featuredMoviesRoute);
-app.get("/movies_by_genre", moviesByGenreRoute)
-app.get("/find_movie", findMovieRoute)
-app.get("/movie_details", movieDetailsRoute)
+app.get(ApiRoute.FeaturedMovies, CONTROLLERS[ApiRoute.FeaturedMovies])
+app.get(ApiRoute.FindMovie, CONTROLLERS[ApiRoute.FindMovie])
+app.get(ApiRoute.Genres, CONTROLLERS[ApiRoute.Genres])
+app.get(ApiRoute.MovieDetails, CONTROLLERS[ApiRoute.MovieDetails])
+app.get(ApiRoute.MoviesByGenre, CONTROLLERS[ApiRoute.MoviesByGenre])
+app.get(ApiRoute.Songs, CONTROLLERS[ApiRoute.Songs])
 
 app.listen(env.PORT)

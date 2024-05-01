@@ -146,82 +146,82 @@ export const MOCK_GENRES_RESPONSE = {
     ]
 }
 
-export const MOCK_MOVIE_INFO = {
-    adult: false,
-    backdrop_path: '/oe7mWkvYhK4PLRNAVSvonzyUXNy.jpg',
-    belongs_to_collection: null,
-    budget: 85000000,
-    genres: [ { id: 28, name: 'Action' }, { id: 53, name: 'Thriller' } ],
-    homepage: 'https://www.amazon.com/gp/video/detail/B0CH5YQPZQ',
-    id: 359410,
-    imdb_id: 'tt3359350',
-    origin_country: [ 'US' ],
-    original_language: 'en',
-    original_title: 'Road House',
-    overview: 'Ex-UFC fighter Dalton takes a job as a bouncer at a Florida Keys roadhouse, only to discover that this paradise is not all it seems.',
-    popularity: 906.716,
-    poster_path: '/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg',
-    production_companies: [
-        {
-            id: 21,
-            logo_path: '/usUnaYV6hQnlVAXP6r4HwrlLFPG.png',
-            name: 'Metro-Goldwyn-Mayer',
-            origin_country: 'US'
-        },
-        {
-            id: 1885,
-            logo_path: '/xlvoOZr4s1PygosrwZyolIFe5xs.png',
-            name: 'Silver Pictures',
-            origin_country: 'US'
-        }
-    ],
-    production_countries: [ { iso_3166_1: 'US', name: 'United States of America' } ],
-    release_date: '2024-03-08',
-    revenue: 0,
-    runtime: 121,
-    spoken_languages: [ { english_name: 'English', iso_639_1: 'en', name: 'English' } ],
-    status: 'Released',
-    tagline: 'Take it outside.',
-    title: 'Road House',
-    video: false,
-    vote_average: 7.022,
-    vote_count: 1604
+// export const MOCK_MOVIE_INFO = {
+//     adult: false,
+//     backdrop_path: '/oe7mWkvYhK4PLRNAVSvonzyUXNy.jpg',
+//     belongs_to_collection: null,
+//     budget: 85000000,
+//     genres: [ { id: 28, name: 'Action' }, { id: 53, name: 'Thriller' } ],
+//     homepage: 'https://www.amazon.com/gp/video/detail/B0CH5YQPZQ',
+//     id: 359410,
+//     imdb_id: 'tt3359350',
+//     origin_country: [ 'US' ],
+//     original_language: 'en',
+//     original_title: 'Road House',
+//     overview: 'Ex-UFC fighter Dalton takes a job as a bouncer at a Florida Keys roadhouse, only to discover that this paradise is not all it seems.',
+//     popularity: 906.716,
+//     poster_path: '/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg',
+//     production_companies: [
+//         {
+//             id: 21,
+//             logo_path: '/usUnaYV6hQnlVAXP6r4HwrlLFPG.png',
+//             name: 'Metro-Goldwyn-Mayer',
+//             origin_country: 'US'
+//         },
+//         {
+//             id: 1885,
+//             logo_path: '/xlvoOZr4s1PygosrwZyolIFe5xs.png',
+//             name: 'Silver Pictures',
+//             origin_country: 'US'
+//         }
+//     ],
+//     production_countries: [ { iso_3166_1: 'US', name: 'United States of America' } ],
+//     release_date: '2024-03-08',
+//     revenue: 0,
+//     runtime: 121,
+//     spoken_languages: [ { english_name: 'English', iso_639_1: 'en', name: 'English' } ],
+//     status: 'Released',
+//     tagline: 'Take it outside.',
+//     title: 'Road House',
+//     video: false,
+//     vote_average: 7.022,
+//     vote_count: 1604
 
-}
+// }
 
-export const MOCK_CREDITS = {
-    cast: [
-        {
-            adult: false,
-            cast_id: 2,
-            character: "Elwood Dalton",
-            credit_id: "618c69e220e6a5002c4d0be1",
-            gender: 2,
-            id: 131,
-            known_for_department: "Acting",
-            name: "Jake Gyllenhaal",
-            order: 0,
-            original_name: "Jake Gyllenhaal",
-            popularity: 107.312,
-            profile_path: "/rJdYHYNhlcOBwbPvDZVvt1xw7bi.jpg"
-        }
-    ],
-    crew: [
-        {
-            adult: false,
-            credit_id: "618c69d7cca7de004307c6ed",
-            department: "Directing",
-            gender: 2,
-            id: 11694,
-            job: "Director",
-            known_for_department: "Directing",
-            name: "Doug Liman",
-            original_name: "Doug Liman",
-            popularity: 21.346,
-            profile_path: "/kIT7NE6MDaiIrjPEbObXk4COFVa.jpg"
-        }
-    ]
-}
+// export const MOCK_CREDITS = {
+//     cast: [
+//         {
+//             adult: false,
+//             cast_id: 2,
+//             character: "Elwood Dalton",
+//             credit_id: "618c69e220e6a5002c4d0be1",
+//             gender: 2,
+//             id: 131,
+//             known_for_department: "Acting",
+//             name: "Jake Gyllenhaal",
+//             order: 0,
+//             original_name: "Jake Gyllenhaal",
+//             popularity: 107.312,
+//             profile_path: "/rJdYHYNhlcOBwbPvDZVvt1xw7bi.jpg"
+//         }
+//     ],
+//     crew: [
+//         {
+//             adult: false,
+//             credit_id: "618c69d7cca7de004307c6ed",
+//             department: "Directing",
+//             gender: 2,
+//             id: 11694,
+//             job: "Director",
+//             known_for_department: "Directing",
+//             name: "Doug Liman",
+//             original_name: "Doug Liman",
+//             popularity: 21.346,
+//             profile_path: "/kIT7NE6MDaiIrjPEbObXk4COFVa.jpg"
+//         }
+//     ]
+// }
 
 export const MOCK_MOVIE_PAGE_RESPONSE = {
     movieInfo: {
@@ -343,3 +343,77 @@ export const MOCK_MOVIE_PAGE_RESPONSE = {
     }
 }
 
+
+export const MOCK_SPOTIFY_RESPONSE = {
+    album: {
+        album_type: 'single',
+        artists: [
+            {
+                external_urls: {
+                spotify: 'https://open.spotify.com/artist/6sFIWsNpZYqfjUpaCgueju'
+                },
+                href: 'https://api.spotify.com/v1/artists/6sFIWsNpZYqfjUpaCgueju',
+                id: '6sFIWsNpZYqfjUpaCgueju',
+                name: 'Carly Rae Jepsen',
+                type: 'artist',
+                uri: 'spotify:artist:6sFIWsNpZYqfjUpaCgueju'
+            }
+        ],
+        available_markets: [],
+        external_urls: {
+            spotify: 'https://open.spotify.com/album/0tGPJ0bkWOUmH7MEOR77qc'
+        },
+        href: 'https://api.spotify.com/v1/albums/0tGPJ0bkWOUmH7MEOR77qc',
+        id: '0tGPJ0bkWOUmH7MEOR77qc',
+        images: [
+            {
+                height: 640,
+                url: 'https://i.scdn.co/image/ab67616d0000b2737359994525d219f64872d3b1',
+                width: 640
+            },
+            {
+                height: 300,
+                url: 'https://i.scdn.co/image/ab67616d00001e027359994525d219f64872d3b1',
+                width: 300
+            },
+            {
+                height: 64,
+                url: 'https://i.scdn.co/image/ab67616d000048517359994525d219f64872d3b1',
+                width: 64
+            }
+        ],
+        name: 'Cut To The Feeling',
+        release_date: '2017-05-26',
+        release_date_precision: 'day',
+        total_tracks: 1,
+        type: 'album',
+        uri: 'spotify:album:0tGPJ0bkWOUmH7MEOR77qc'
+    },
+    artists: [
+        {
+            external_urls: {
+                spotify: 'https://open.spotify.com/artist/6sFIWsNpZYqfjUpaCgueju'
+            },
+            href: 'https://api.spotify.com/v1/artists/6sFIWsNpZYqfjUpaCgueju',
+            id: '6sFIWsNpZYqfjUpaCgueju',
+            name: 'Carly Rae Jepsen',
+            type: 'artist',
+            uri: 'spotify:artist:6sFIWsNpZYqfjUpaCgueju'
+        }
+    ],
+    available_markets: [],
+    disc_number: 1,
+    duration_ms: 207959,
+    explicit: false,
+    external_ids: { isrc: 'USUM71703861' },
+    external_urls: { spotify: 'https://open.spotify.com/track/11dFghVXANMlKmJXsNCbNl' },
+    href: 'https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl',
+    id: '11dFghVXANMlKmJXsNCbNl',
+    is_local: false,
+    name: 'Cut To The Feeling',
+    popularity: 0,
+    preview_url: null,
+    track_number: 1,
+    type: 'track',
+    uri: 'spotify:track:11dFghVXANMlKmJXsNCbNl'
+}
