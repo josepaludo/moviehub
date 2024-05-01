@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import env from "../common/env";
 import { MOCK_GENRES_RESPONSE, MOCK_MOVIE_PAGE_RESPONSE, MOCK_MOVIES_RESPONSE, MOCK_SPOTIFY_RESPONSE } from "../utils/mock_responses";
-import { featuredMoviesController, findMovieController, genresController, getSongController, movieDetailsController, moviesByGenreController } from "./controllers";
+import { featuredMoviesController, findMovieController, genresController, getSongController, movieDetailsController, moviesByGenreController, testWikiController } from "./controllers";
 
 
 export enum ApiRoute {
@@ -10,7 +10,8 @@ export enum ApiRoute {
     Genres = "/genres",
     FindMovie = "/find_movie",
     MovieDetails = "/movie_details",
-    Songs = "/spotify"
+    Songs = "/spotify",
+    TestWiki = "/wiki"
 }
 
 
@@ -21,8 +22,9 @@ export const CONTROLLERS: TController  = {
     [ApiRoute.MovieDetails]: env.MOCK ? (_, r) => r.send(MOCK_MOVIE_PAGE_RESPONSE) : movieDetailsController,
     [ApiRoute.MoviesByGenre]: env.MOCK ? (_, r) => r.send(MOCK_MOVIES_RESPONSE) : moviesByGenreController,
     [ApiRoute.Songs]: env.MOCK ? (_, r) => r.send(MOCK_SPOTIFY_RESPONSE) : getSongController,
+    [ApiRoute.TestWiki]: testWikiController
 }
 
 type TController = {
-    [route in ApiRoute]: (rq: Request, rs: Response) => any
+    [route in ApiRoute]: (request: Request, response: Response) => any
 }

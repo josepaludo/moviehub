@@ -6,7 +6,10 @@ const env = load({
     PORT: Number,
     MOCK: Boolean,
     CLIENTE_SECRET: String,
-    CLIENT_ID: String
+    CLIENT_ID: String,
+    WIKI_TOKEN: String,
+    WIKI_APP: String,
+    WIKI_EMAIL: String
 })
 
 export default env

@@ -1,4 +1,4 @@
-AxiosError: Request failed with status code 403
+AxiosError: Request failed with status code 400
     at settle (/home/josepaludo/Documents/4kst/desafio-tecnico/api/node_modules/axios/lib/core/settle.js:19:12)
     at Unzip.handleStreamEnd (/home/josepaludo/Documents/4kst/desafio-tecnico/api/node_modules/axios/lib/adapters/http.js:589:11)
     at Unzip.emit (node:events:525:35)
@@ -32,15 +32,14 @@ AxiosError: Request failed with status code 403
     validateStatus: [Function: validateStatus],
     headers: Object [AxiosHeaders] {
       Accept: 'application/json, text/plain, */*',
-      'Content-Type': undefined,
-      Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-      'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+      'Content-Type': 'application/json',
       'User-Agent': 'axios/1.6.8',
+      'Content-Length': '141',
       'Accept-Encoding': 'gzip, compress, deflate, br'
     },
-    method: 'get',
-    url: 'https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/Q42',
-    data: undefined
+    method: 'post',
+    url: 'https://www.wikidata.org/w/rest.php/oauth2/access_token',
+    data: '{"grant_type":"client_credentials","client_id":"f1eaf401d045108de857f9150048f03f","client_secret":"91139e005084a2e34f08dcf7799679affc9bd2fe"}'
   },
   request: <ref *1> ClientRequest {
     _events: [Object: null prototype] {
@@ -63,13 +62,13 @@ AxiosError: Request failed with status code 403
     shouldKeepAlive: false,
     maxRequestsOnConnectionReached: false,
     _defaultKeepAlive: true,
-    useChunkedEncodingByDefault: false,
+    useChunkedEncodingByDefault: true,
     sendDate: false,
     _removedConnection: false,
     _removedContLen: false,
     _removedTE: false,
     strictContentLength: false,
-    _contentLength: 0,
+    _contentLength: '141',
     _hasBody: true,
     _trailer: '',
     finished: true,
@@ -218,8 +217,8 @@ AxiosError: Request failed with status code 403
       [Symbol(kSetNoDelay)]: false,
       [Symbol(kSetKeepAlive)]: true,
       [Symbol(kSetKeepAliveInitialDelay)]: 60,
-      [Symbol(kBytesRead)]: 1324,
-      [Symbol(kBytesWritten)]: 1447,
+      [Symbol(kBytesRead)]: 1442,
+      [Symbol(kBytesWritten)]: 400,
       [Symbol(connect-options)]: {
         rejectUnauthorized: true,
         ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
@@ -229,12 +228,12 @@ AxiosError: Request failed with status code 403
         maxBodyLength: Infinity,
         protocol: 'https:',
         path: null,
-        method: 'GET',
+        method: 'POST',
         headers: [Object: null prototype] {
           Accept: 'application/json, text/plain, */*',
-          Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-          'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+          'Content-Type': 'application/json',
           'User-Agent': 'axios/1.6.8',
+          'Content-Length': '141',
           'Accept-Encoding': 'gzip, compress, deflate, br'
         },
         agents: { http: undefined, https: undefined },
@@ -392,7 +391,10 @@ AxiosError: Request failed with status code 403
                           listener: [Function (anonymous)]
                         },
                         [Function: onClose],
-                        [Function: socketCloseListener]
+                        [Function: socketCloseListener],
+                        [Function: bound onceWrapper] {
+                          listener: [Function: onClose]
+                        }
                       ],
                       end: [
                         [Function: onConnectEnd],
@@ -400,6 +402,17 @@ AxiosError: Request failed with status code 403
                         [Function: socketOnEnd]
                       ],
                       newListener: [Function: keylogNewListener],
+                      connect: [
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function: connect]
+                        }
+                      ],
                       secure: [Function: onConnectSecure],
                       session: [Function (anonymous)],
                       free: [Function: onFree],
@@ -409,8 +422,8 @@ AxiosError: Request failed with status code 403
                       data: [Function: socketOnData],
                       drain: [Function: ondrain]
                     },
-                    _eventsCount: 11,
-                    connecting: false,
+                    _eventsCount: 12,
+                    connecting: true,
                     _hadError: false,
                     _parent: null,
                     _host: 'accounts.spotify.com',
@@ -485,7 +498,27 @@ AxiosError: Request failed with status code 403
                     },
                     allowHalfOpen: false,
                     _sockname: null,
-                    _pendingData: null,
+                    _pendingData: [
+                      {
+                        chunk: 'POST /api/token HTTP/1.1\r\n' +
+                          'Accept: application/json, text/plain, */*\r\n' +
+                          'Content-Type: application/x-www-form-urlencoded\r\n' +
+                          'User-Agent: axios/1.6.8\r\n' +
+                          'Content-Length: 119\r\n' +
+                          'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                          'Host: accounts.spotify.com\r\n' +
+                          'Connection: close\r\n' +
+                          '\r\n',
+                        encoding: 'latin1',
+                        callback: [Function: nop]
+                      },
+                      {
+                        chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                        encoding: 'buffer',
+                        callback: [Function (anonymous)]
+                      },
+                      allBuffers: false
+                    ],
                     _pendingEncoding: '',
                     server: undefined,
                     _server: null,
@@ -497,7 +530,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -1073,7 +1106,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -1093,7 +1126,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -1102,7 +1135,7 @@ AxiosError: Request failed with status code 403
                       onerror: [Function: onerror],
                       [Symbol(owner_symbol)]: [Circular *2]
                     },
-                    [Symbol(lastWriteQueueSize)]: 378,
+                    [Symbol(lastWriteQueueSize)]: 0,
                     [Symbol(timeout)]: null,
                     [Symbol(kBuffer)]: null,
                     [Symbol(kBufferCb)]: null,
@@ -1162,7 +1195,7 @@ AxiosError: Request failed with status code 403
               maxCachedSessions: 100,
               _sessionCache: {
                 map: {
-                  'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                  'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                 },
                 list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
               },
@@ -1174,7 +1207,7 @@ AxiosError: Request failed with status code 403
             request: [Function: request]
           }
         },
-        pathname: '/w/rest.php/wikibase/v0/entities/items/Q42',
+        pathname: '/w/rest.php/oauth2/access_token',
         _defaultAgent: <ref *3> Agent {
           _events: [Object: null prototype] {
             free: [Function (anonymous)],
@@ -1223,7 +1256,10 @@ AxiosError: Request failed with status code 403
                       listener: [Function (anonymous)]
                     },
                     [Function: onClose],
-                    [Function: socketCloseListener]
+                    [Function: socketCloseListener],
+                    [Function: bound onceWrapper] {
+                      listener: [Function: onClose]
+                    }
                   ],
                   end: [
                     [Function: onConnectEnd],
@@ -1231,6 +1267,17 @@ AxiosError: Request failed with status code 403
                     [Function: socketOnEnd]
                   ],
                   newListener: [Function: keylogNewListener],
+                  connect: [
+                    [Function: bound onceWrapper] {
+                      listener: [Function (anonymous)]
+                    },
+                    [Function: bound onceWrapper] {
+                      listener: [Function (anonymous)]
+                    },
+                    [Function: bound onceWrapper] {
+                      listener: [Function: connect]
+                    }
+                  ],
                   secure: [Function: onConnectSecure],
                   session: [Function (anonymous)],
                   free: [Function: onFree],
@@ -1240,8 +1287,8 @@ AxiosError: Request failed with status code 403
                   data: [Function: socketOnData],
                   drain: [Function: ondrain]
                 },
-                _eventsCount: 11,
-                connecting: false,
+                _eventsCount: 12,
+                connecting: true,
                 _hadError: false,
                 _parent: null,
                 _host: 'accounts.spotify.com',
@@ -1316,7 +1363,27 @@ AxiosError: Request failed with status code 403
                 },
                 allowHalfOpen: false,
                 _sockname: null,
-                _pendingData: null,
+                _pendingData: [
+                  {
+                    chunk: 'POST /api/token HTTP/1.1\r\n' +
+                      'Accept: application/json, text/plain, */*\r\n' +
+                      'Content-Type: application/x-www-form-urlencoded\r\n' +
+                      'User-Agent: axios/1.6.8\r\n' +
+                      'Content-Length: 119\r\n' +
+                      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                      'Host: accounts.spotify.com\r\n' +
+                      'Connection: close\r\n' +
+                      '\r\n',
+                    encoding: 'latin1',
+                    callback: [Function: nop]
+                  },
+                  {
+                    chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                    encoding: 'buffer',
+                    callback: [Function (anonymous)]
+                  },
+                  allBuffers: false
+                ],
                 _pendingEncoding: '',
                 server: undefined,
                 _server: null,
@@ -1328,7 +1395,7 @@ AxiosError: Request failed with status code 403
                   },
                   _parentWrap: undefined,
                   _secureContext: SecureContext { context: SecureContext {} },
-                  reading: true,
+                  reading: false,
                   onkeylog: [Function: onkeylog],
                   onhandshakestart: {},
                   onhandshakedone: [Function (anonymous)],
@@ -2219,7 +2286,7 @@ AxiosError: Request failed with status code 403
                   },
                   _parentWrap: undefined,
                   _secureContext: SecureContext { context: SecureContext {} },
-                  reading: true,
+                  reading: false,
                   onkeylog: [Function: onkeylog],
                   onhandshakestart: {},
                   onhandshakedone: [Function (anonymous)],
@@ -2239,7 +2306,7 @@ AxiosError: Request failed with status code 403
                   },
                   _parentWrap: undefined,
                   _secureContext: SecureContext { context: SecureContext {} },
-                  reading: true,
+                  reading: false,
                   onkeylog: [Function: onkeylog],
                   onhandshakestart: {},
                   onhandshakedone: [Function (anonymous)],
@@ -2248,7 +2315,7 @@ AxiosError: Request failed with status code 403
                   onerror: [Function: onerror],
                   [Symbol(owner_symbol)]: [Circular *2]
                 },
-                [Symbol(lastWriteQueueSize)]: 378,
+                [Symbol(lastWriteQueueSize)]: 0,
                 [Symbol(timeout)]: null,
                 [Symbol(kBuffer)]: null,
                 [Symbol(kBufferCb)]: null,
@@ -2413,7 +2480,7 @@ AxiosError: Request failed with status code 403
           maxCachedSessions: 100,
           _sessionCache: {
             map: {
-              'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+              'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
             },
             list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
           },
@@ -2427,11 +2494,11 @@ AxiosError: Request failed with status code 403
         singleUse: true
       }
     },
-    _header: 'GET /w/rest.php/wikibase/v0/entities/items/Q42 HTTP/1.1\r\n' +
+    _header: 'POST /w/rest.php/oauth2/access_token HTTP/1.1\r\n' +
       'Accept: application/json, text/plain, */*\r\n' +
-      'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s\r\n' +
-      'Api-User-Agent: movie-hub (joseppaludo@gmail.com)\r\n' +
+      'Content-Type: application/json\r\n' +
       'User-Agent: axios/1.6.8\r\n' +
+      'Content-Length: 141\r\n' +
       'Accept-Encoding: gzip, compress, deflate, br\r\n' +
       'Host: www.wikidata.org\r\n' +
       'Connection: close\r\n' +
@@ -2486,7 +2553,10 @@ AxiosError: Request failed with status code 403
                   listener: [Function (anonymous)]
                 },
                 [Function: onClose],
-                [Function: socketCloseListener]
+                [Function: socketCloseListener],
+                [Function: bound onceWrapper] {
+                  listener: [Function: onClose]
+                }
               ],
               end: [
                 [Function: onConnectEnd],
@@ -2494,6 +2564,17 @@ AxiosError: Request failed with status code 403
                 [Function: socketOnEnd]
               ],
               newListener: [Function: keylogNewListener],
+              connect: [
+                [Function: bound onceWrapper] {
+                  listener: [Function (anonymous)]
+                },
+                [Function: bound onceWrapper] {
+                  listener: [Function (anonymous)]
+                },
+                [Function: bound onceWrapper] {
+                  listener: [Function: connect]
+                }
+              ],
               secure: [Function: onConnectSecure],
               session: [Function (anonymous)],
               free: [Function: onFree],
@@ -2503,8 +2584,8 @@ AxiosError: Request failed with status code 403
               data: [Function: socketOnData],
               drain: [Function: ondrain]
             },
-            _eventsCount: 11,
-            connecting: false,
+            _eventsCount: 12,
+            connecting: true,
             _hadError: false,
             _parent: null,
             _host: 'accounts.spotify.com',
@@ -2579,7 +2660,27 @@ AxiosError: Request failed with status code 403
             },
             allowHalfOpen: false,
             _sockname: null,
-            _pendingData: null,
+            _pendingData: [
+              {
+                chunk: 'POST /api/token HTTP/1.1\r\n' +
+                  'Accept: application/json, text/plain, */*\r\n' +
+                  'Content-Type: application/x-www-form-urlencoded\r\n' +
+                  'User-Agent: axios/1.6.8\r\n' +
+                  'Content-Length: 119\r\n' +
+                  'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                  'Host: accounts.spotify.com\r\n' +
+                  'Connection: close\r\n' +
+                  '\r\n',
+                encoding: 'latin1',
+                callback: [Function: nop]
+              },
+              {
+                chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                encoding: 'buffer',
+                callback: [Function (anonymous)]
+              },
+              allBuffers: false
+            ],
             _pendingEncoding: '',
             server: undefined,
             _server: null,
@@ -2591,7 +2692,7 @@ AxiosError: Request failed with status code 403
               },
               _parentWrap: undefined,
               _secureContext: SecureContext { context: SecureContext {} },
-              reading: true,
+              reading: false,
               onkeylog: [Function: onkeylog],
               onhandshakestart: {},
               onhandshakedone: [Function (anonymous)],
@@ -3468,7 +3569,7 @@ AxiosError: Request failed with status code 403
               },
               _parentWrap: undefined,
               _secureContext: SecureContext { context: SecureContext {} },
-              reading: true,
+              reading: false,
               onkeylog: [Function: onkeylog],
               onhandshakestart: {},
               onhandshakedone: [Function (anonymous)],
@@ -3488,7 +3589,7 @@ AxiosError: Request failed with status code 403
               },
               _parentWrap: undefined,
               _secureContext: SecureContext { context: SecureContext {} },
-              reading: true,
+              reading: false,
               onkeylog: [Function: onkeylog],
               onhandshakestart: {},
               onhandshakedone: [Function (anonymous)],
@@ -3497,7 +3598,7 @@ AxiosError: Request failed with status code 403
               onerror: [Function: onerror],
               [Symbol(owner_symbol)]: [Circular *2]
             },
-            [Symbol(lastWriteQueueSize)]: 378,
+            [Symbol(lastWriteQueueSize)]: 0,
             [Symbol(timeout)]: null,
             [Symbol(kBuffer)]: null,
             [Symbol(kBufferCb)]: null,
@@ -3662,18 +3763,18 @@ AxiosError: Request failed with status code 403
       maxCachedSessions: 100,
       _sessionCache: {
         map: {
-          'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+          'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
         },
         list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
       },
       [Symbol(kCapture)]: false
     },
     socketPath: undefined,
-    method: 'GET',
+    method: 'POST',
     maxHeaderSize: undefined,
     insecureHTTPParser: undefined,
     joinDuplicateHeaders: undefined,
-    path: '/w/rest.php/wikibase/v0/entities/items/Q42',
+    path: '/w/rest.php/oauth2/access_token',
     _ended: true,
     res: IncomingMessage {
       _readableState: ReadableState {
@@ -3871,8 +3972,8 @@ AxiosError: Request failed with status code 403
         [Symbol(kSetNoDelay)]: false,
         [Symbol(kSetKeepAlive)]: true,
         [Symbol(kSetKeepAliveInitialDelay)]: 60,
-        [Symbol(kBytesRead)]: 1324,
-        [Symbol(kBytesWritten)]: 1447,
+        [Symbol(kBytesRead)]: 1442,
+        [Symbol(kBytesWritten)]: 400,
         [Symbol(connect-options)]: {
           rejectUnauthorized: true,
           ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
@@ -3882,12 +3983,12 @@ AxiosError: Request failed with status code 403
           maxBodyLength: Infinity,
           protocol: 'https:',
           path: null,
-          method: 'GET',
+          method: 'POST',
           headers: [Object: null prototype] {
             Accept: 'application/json, text/plain, */*',
-            Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-            'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+            'Content-Type': 'application/json',
             'User-Agent': 'axios/1.6.8',
+            'Content-Length': '141',
             'Accept-Encoding': 'gzip, compress, deflate, br'
           },
           agents: { http: undefined, https: undefined },
@@ -4045,7 +4146,10 @@ AxiosError: Request failed with status code 403
                             listener: [Function (anonymous)]
                           },
                           [Function: onClose],
-                          [Function: socketCloseListener]
+                          [Function: socketCloseListener],
+                          [Function: bound onceWrapper] {
+                            listener: [Function: onClose]
+                          }
                         ],
                         end: [
                           [Function: onConnectEnd],
@@ -4053,6 +4157,17 @@ AxiosError: Request failed with status code 403
                           [Function: socketOnEnd]
                         ],
                         newListener: [Function: keylogNewListener],
+                        connect: [
+                          [Function: bound onceWrapper] {
+                            listener: [Function (anonymous)]
+                          },
+                          [Function: bound onceWrapper] {
+                            listener: [Function (anonymous)]
+                          },
+                          [Function: bound onceWrapper] {
+                            listener: [Function: connect]
+                          }
+                        ],
                         secure: [Function: onConnectSecure],
                         session: [Function (anonymous)],
                         free: [Function: onFree],
@@ -4062,8 +4177,8 @@ AxiosError: Request failed with status code 403
                         data: [Function: socketOnData],
                         drain: [Function: ondrain]
                       },
-                      _eventsCount: 11,
-                      connecting: false,
+                      _eventsCount: 12,
+                      connecting: true,
                       _hadError: false,
                       _parent: null,
                       _host: 'accounts.spotify.com',
@@ -4138,7 +4253,27 @@ AxiosError: Request failed with status code 403
                       },
                       allowHalfOpen: false,
                       _sockname: null,
-                      _pendingData: null,
+                      _pendingData: [
+                        {
+                          chunk: 'POST /api/token HTTP/1.1\r\n' +
+                            'Accept: application/json, text/plain, */*\r\n' +
+                            'Content-Type: application/x-www-form-urlencoded\r\n' +
+                            'User-Agent: axios/1.6.8\r\n' +
+                            'Content-Length: 119\r\n' +
+                            'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                            'Host: accounts.spotify.com\r\n' +
+                            'Connection: close\r\n' +
+                            '\r\n',
+                          encoding: 'latin1',
+                          callback: [Function: nop]
+                        },
+                        {
+                          chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                          encoding: 'buffer',
+                          callback: [Function (anonymous)]
+                        },
+                        allBuffers: false
+                      ],
                       _pendingEncoding: '',
                       server: undefined,
                       _server: null,
@@ -4150,7 +4285,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -4726,7 +4861,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -4746,7 +4881,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -4755,7 +4890,7 @@ AxiosError: Request failed with status code 403
                         onerror: [Function: onerror],
                         [Symbol(owner_symbol)]: [Circular *2]
                       },
-                      [Symbol(lastWriteQueueSize)]: 378,
+                      [Symbol(lastWriteQueueSize)]: 0,
                       [Symbol(timeout)]: null,
                       [Symbol(kBuffer)]: null,
                       [Symbol(kBufferCb)]: null,
@@ -4815,7 +4950,7 @@ AxiosError: Request failed with status code 403
                 maxCachedSessions: 100,
                 _sessionCache: {
                   map: {
-                    'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                    'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                   },
                   list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
                 },
@@ -4827,7 +4962,7 @@ AxiosError: Request failed with status code 403
               request: [Function: request]
             }
           },
-          pathname: '/w/rest.php/wikibase/v0/entities/items/Q42',
+          pathname: '/w/rest.php/oauth2/access_token',
           _defaultAgent: <ref *3> Agent {
             _events: [Object: null prototype] {
               free: [Function (anonymous)],
@@ -4876,7 +5011,10 @@ AxiosError: Request failed with status code 403
                         listener: [Function (anonymous)]
                       },
                       [Function: onClose],
-                      [Function: socketCloseListener]
+                      [Function: socketCloseListener],
+                      [Function: bound onceWrapper] {
+                        listener: [Function: onClose]
+                      }
                     ],
                     end: [
                       [Function: onConnectEnd],
@@ -4884,6 +5022,17 @@ AxiosError: Request failed with status code 403
                       [Function: socketOnEnd]
                     ],
                     newListener: [Function: keylogNewListener],
+                    connect: [
+                      [Function: bound onceWrapper] {
+                        listener: [Function (anonymous)]
+                      },
+                      [Function: bound onceWrapper] {
+                        listener: [Function (anonymous)]
+                      },
+                      [Function: bound onceWrapper] {
+                        listener: [Function: connect]
+                      }
+                    ],
                     secure: [Function: onConnectSecure],
                     session: [Function (anonymous)],
                     free: [Function: onFree],
@@ -4893,8 +5042,8 @@ AxiosError: Request failed with status code 403
                     data: [Function: socketOnData],
                     drain: [Function: ondrain]
                   },
-                  _eventsCount: 11,
-                  connecting: false,
+                  _eventsCount: 12,
+                  connecting: true,
                   _hadError: false,
                   _parent: null,
                   _host: 'accounts.spotify.com',
@@ -4969,7 +5118,27 @@ AxiosError: Request failed with status code 403
                   },
                   allowHalfOpen: false,
                   _sockname: null,
-                  _pendingData: null,
+                  _pendingData: [
+                    {
+                      chunk: 'POST /api/token HTTP/1.1\r\n' +
+                        'Accept: application/json, text/plain, */*\r\n' +
+                        'Content-Type: application/x-www-form-urlencoded\r\n' +
+                        'User-Agent: axios/1.6.8\r\n' +
+                        'Content-Length: 119\r\n' +
+                        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                        'Host: accounts.spotify.com\r\n' +
+                        'Connection: close\r\n' +
+                        '\r\n',
+                      encoding: 'latin1',
+                      callback: [Function: nop]
+                    },
+                    {
+                      chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                      encoding: 'buffer',
+                      callback: [Function (anonymous)]
+                    },
+                    allBuffers: false
+                  ],
                   _pendingEncoding: '',
                   server: undefined,
                   _server: null,
@@ -4981,7 +5150,7 @@ AxiosError: Request failed with status code 403
                     },
                     _parentWrap: undefined,
                     _secureContext: SecureContext { context: SecureContext {} },
-                    reading: true,
+                    reading: false,
                     onkeylog: [Function: onkeylog],
                     onhandshakestart: {},
                     onhandshakedone: [Function (anonymous)],
@@ -5875,7 +6044,7 @@ AxiosError: Request failed with status code 403
                     },
                     _parentWrap: undefined,
                     _secureContext: SecureContext { context: SecureContext {} },
-                    reading: true,
+                    reading: false,
                     onkeylog: [Function: onkeylog],
                     onhandshakestart: {},
                     onhandshakedone: [Function (anonymous)],
@@ -5895,7 +6064,7 @@ AxiosError: Request failed with status code 403
                     },
                     _parentWrap: undefined,
                     _secureContext: SecureContext { context: SecureContext {} },
-                    reading: true,
+                    reading: false,
                     onkeylog: [Function: onkeylog],
                     onhandshakestart: {},
                     onhandshakedone: [Function (anonymous)],
@@ -5904,7 +6073,7 @@ AxiosError: Request failed with status code 403
                     onerror: [Function: onerror],
                     [Symbol(owner_symbol)]: [Circular *2]
                   },
-                  [Symbol(lastWriteQueueSize)]: 378,
+                  [Symbol(lastWriteQueueSize)]: 0,
                   [Symbol(timeout)]: null,
                   [Symbol(kBuffer)]: null,
                   [Symbol(kBufferCb)]: null,
@@ -6071,7 +6240,7 @@ AxiosError: Request failed with status code 403
             maxCachedSessions: 100,
             _sessionCache: {
               map: {
-                'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
               },
               list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
             },
@@ -6091,13 +6260,13 @@ AxiosError: Request failed with status code 403
       complete: true,
       rawHeaders: [
         'date',
-        'Wed, 01 May 2024 17:01:31 GMT',
+        'Wed, 01 May 2024 17:15:27 GMT',
         'server',
         'mw-api-ext.eqiad.main-6568d96485-7z7s5',
         'x-content-type-options',
         'nosniff',
         'cache-control',
-        'no-cache',
+        'private,no-cache,s-maxage=0',
         'access-control-allow-origin',
         '*',
         'vary',
@@ -6109,7 +6278,7 @@ AxiosError: Request failed with status code 403
         'age',
         '0',
         'x-cache',
-        'cp1104 pass, cp1104 pass',
+        'cp1104 miss, cp1104 pass',
         'x-cache-status',
         'pass',
         'server-timing',
@@ -6131,7 +6300,7 @@ AxiosError: Request failed with status code 403
         'set-cookie',
         'NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600',
         'content-length',
-        '81',
+        '177',
         'connection',
         'close'
       ],
@@ -6141,8 +6310,8 @@ AxiosError: Request failed with status code 403
       upgrade: false,
       url: '',
       method: null,
-      statusCode: 403,
-      statusMessage: 'Forbidden',
+      statusCode: 400,
+      statusMessage: 'Bad Request',
       client: TLSSocket {
         _tlsOptions: {
           allowHalfOpen: undefined,
@@ -6286,8 +6455,8 @@ AxiosError: Request failed with status code 403
         [Symbol(kSetNoDelay)]: false,
         [Symbol(kSetKeepAlive)]: true,
         [Symbol(kSetKeepAliveInitialDelay)]: 60,
-        [Symbol(kBytesRead)]: 1324,
-        [Symbol(kBytesWritten)]: 1447,
+        [Symbol(kBytesRead)]: 1442,
+        [Symbol(kBytesWritten)]: 400,
         [Symbol(connect-options)]: {
           rejectUnauthorized: true,
           ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
@@ -6297,12 +6466,12 @@ AxiosError: Request failed with status code 403
           maxBodyLength: Infinity,
           protocol: 'https:',
           path: null,
-          method: 'GET',
+          method: 'POST',
           headers: [Object: null prototype] {
             Accept: 'application/json, text/plain, */*',
-            Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-            'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+            'Content-Type': 'application/json',
             'User-Agent': 'axios/1.6.8',
+            'Content-Length': '141',
             'Accept-Encoding': 'gzip, compress, deflate, br'
           },
           agents: { http: undefined, https: undefined },
@@ -6460,7 +6629,10 @@ AxiosError: Request failed with status code 403
                             listener: [Function (anonymous)]
                           },
                           [Function: onClose],
-                          [Function: socketCloseListener]
+                          [Function: socketCloseListener],
+                          [Function: bound onceWrapper] {
+                            listener: [Function: onClose]
+                          }
                         ],
                         end: [
                           [Function: onConnectEnd],
@@ -6468,6 +6640,17 @@ AxiosError: Request failed with status code 403
                           [Function: socketOnEnd]
                         ],
                         newListener: [Function: keylogNewListener],
+                        connect: [
+                          [Function: bound onceWrapper] {
+                            listener: [Function (anonymous)]
+                          },
+                          [Function: bound onceWrapper] {
+                            listener: [Function (anonymous)]
+                          },
+                          [Function: bound onceWrapper] {
+                            listener: [Function: connect]
+                          }
+                        ],
                         secure: [Function: onConnectSecure],
                         session: [Function (anonymous)],
                         free: [Function: onFree],
@@ -6477,8 +6660,8 @@ AxiosError: Request failed with status code 403
                         data: [Function: socketOnData],
                         drain: [Function: ondrain]
                       },
-                      _eventsCount: 11,
-                      connecting: false,
+                      _eventsCount: 12,
+                      connecting: true,
                       _hadError: false,
                       _parent: null,
                       _host: 'accounts.spotify.com',
@@ -6553,7 +6736,27 @@ AxiosError: Request failed with status code 403
                       },
                       allowHalfOpen: false,
                       _sockname: null,
-                      _pendingData: null,
+                      _pendingData: [
+                        {
+                          chunk: 'POST /api/token HTTP/1.1\r\n' +
+                            'Accept: application/json, text/plain, */*\r\n' +
+                            'Content-Type: application/x-www-form-urlencoded\r\n' +
+                            'User-Agent: axios/1.6.8\r\n' +
+                            'Content-Length: 119\r\n' +
+                            'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                            'Host: accounts.spotify.com\r\n' +
+                            'Connection: close\r\n' +
+                            '\r\n',
+                          encoding: 'latin1',
+                          callback: [Function: nop]
+                        },
+                        {
+                          chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                          encoding: 'buffer',
+                          callback: [Function (anonymous)]
+                        },
+                        allBuffers: false
+                      ],
                       _pendingEncoding: '',
                       server: undefined,
                       _server: null,
@@ -6565,7 +6768,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -7141,7 +7344,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -7161,7 +7364,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -7170,7 +7373,7 @@ AxiosError: Request failed with status code 403
                         onerror: [Function: onerror],
                         [Symbol(owner_symbol)]: [Circular *2]
                       },
-                      [Symbol(lastWriteQueueSize)]: 378,
+                      [Symbol(lastWriteQueueSize)]: 0,
                       [Symbol(timeout)]: null,
                       [Symbol(kBuffer)]: null,
                       [Symbol(kBufferCb)]: null,
@@ -7230,7 +7433,7 @@ AxiosError: Request failed with status code 403
                 maxCachedSessions: 100,
                 _sessionCache: {
                   map: {
-                    'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                    'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                   },
                   list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
                 },
@@ -7242,7 +7445,7 @@ AxiosError: Request failed with status code 403
               request: [Function: request]
             }
           },
-          pathname: '/w/rest.php/wikibase/v0/entities/items/Q42',
+          pathname: '/w/rest.php/oauth2/access_token',
           _defaultAgent: <ref *3> Agent {
             _events: [Object: null prototype] {
               free: [Function (anonymous)],
@@ -7291,7 +7494,10 @@ AxiosError: Request failed with status code 403
                         listener: [Function (anonymous)]
                       },
                       [Function: onClose],
-                      [Function: socketCloseListener]
+                      [Function: socketCloseListener],
+                      [Function: bound onceWrapper] {
+                        listener: [Function: onClose]
+                      }
                     ],
                     end: [
                       [Function: onConnectEnd],
@@ -7299,6 +7505,17 @@ AxiosError: Request failed with status code 403
                       [Function: socketOnEnd]
                     ],
                     newListener: [Function: keylogNewListener],
+                    connect: [
+                      [Function: bound onceWrapper] {
+                        listener: [Function (anonymous)]
+                      },
+                      [Function: bound onceWrapper] {
+                        listener: [Function (anonymous)]
+                      },
+                      [Function: bound onceWrapper] {
+                        listener: [Function: connect]
+                      }
+                    ],
                     secure: [Function: onConnectSecure],
                     session: [Function (anonymous)],
                     free: [Function: onFree],
@@ -7308,8 +7525,8 @@ AxiosError: Request failed with status code 403
                     data: [Function: socketOnData],
                     drain: [Function: ondrain]
                   },
-                  _eventsCount: 11,
-                  connecting: false,
+                  _eventsCount: 12,
+                  connecting: true,
                   _hadError: false,
                   _parent: null,
                   _host: 'accounts.spotify.com',
@@ -7384,7 +7601,27 @@ AxiosError: Request failed with status code 403
                   },
                   allowHalfOpen: false,
                   _sockname: null,
-                  _pendingData: null,
+                  _pendingData: [
+                    {
+                      chunk: 'POST /api/token HTTP/1.1\r\n' +
+                        'Accept: application/json, text/plain, */*\r\n' +
+                        'Content-Type: application/x-www-form-urlencoded\r\n' +
+                        'User-Agent: axios/1.6.8\r\n' +
+                        'Content-Length: 119\r\n' +
+                        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                        'Host: accounts.spotify.com\r\n' +
+                        'Connection: close\r\n' +
+                        '\r\n',
+                      encoding: 'latin1',
+                      callback: [Function: nop]
+                    },
+                    {
+                      chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                      encoding: 'buffer',
+                      callback: [Function (anonymous)]
+                    },
+                    allBuffers: false
+                  ],
                   _pendingEncoding: '',
                   server: undefined,
                   _server: null,
@@ -7396,7 +7633,7 @@ AxiosError: Request failed with status code 403
                     },
                     _parentWrap: undefined,
                     _secureContext: SecureContext { context: SecureContext {} },
-                    reading: true,
+                    reading: false,
                     onkeylog: [Function: onkeylog],
                     onhandshakestart: {},
                     onhandshakedone: [Function (anonymous)],
@@ -8290,7 +8527,7 @@ AxiosError: Request failed with status code 403
                     },
                     _parentWrap: undefined,
                     _secureContext: SecureContext { context: SecureContext {} },
-                    reading: true,
+                    reading: false,
                     onkeylog: [Function: onkeylog],
                     onhandshakestart: {},
                     onhandshakedone: [Function (anonymous)],
@@ -8310,7 +8547,7 @@ AxiosError: Request failed with status code 403
                     },
                     _parentWrap: undefined,
                     _secureContext: SecureContext { context: SecureContext {} },
-                    reading: true,
+                    reading: false,
                     onkeylog: [Function: onkeylog],
                     onhandshakestart: {},
                     onhandshakedone: [Function (anonymous)],
@@ -8319,7 +8556,7 @@ AxiosError: Request failed with status code 403
                     onerror: [Function: onerror],
                     [Symbol(owner_symbol)]: [Circular *2]
                   },
-                  [Symbol(lastWriteQueueSize)]: 378,
+                  [Symbol(lastWriteQueueSize)]: 0,
                   [Symbol(timeout)]: null,
                   [Symbol(kBuffer)]: null,
                   [Symbol(kBufferCb)]: null,
@@ -8486,7 +8723,7 @@ AxiosError: Request failed with status code 403
             maxCachedSessions: 100,
             _sessionCache: {
               map: {
-                'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
               },
               list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
             },
@@ -8503,19 +8740,19 @@ AxiosError: Request failed with status code 403
       _consuming: false,
       _dumped: false,
       req: [Circular *1],
-      responseUrl: 'https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/Q42',
+      responseUrl: 'https://www.wikidata.org/w/rest.php/oauth2/access_token',
       redirects: [],
       [Symbol(kCapture)]: false,
       [Symbol(kHeaders)]: {
-        date: 'Wed, 01 May 2024 17:01:31 GMT',
+        date: 'Wed, 01 May 2024 17:15:27 GMT',
         server: 'mw-api-ext.eqiad.main-6568d96485-7z7s5',
         'x-content-type-options': 'nosniff',
-        'cache-control': 'no-cache',
+        'cache-control': 'private,no-cache,s-maxage=0',
         'access-control-allow-origin': '*',
         vary: 'Accept-Encoding',
         'content-type': 'application/json',
         age: '0',
-        'x-cache': 'cp1104 pass, cp1104 pass',
+        'x-cache': 'cp1104 miss, cp1104 pass',
         'x-cache-status': 'pass',
         'server-timing': 'cache;desc="pass", host;desc="cp1104"',
         'strict-transport-security': 'max-age=106384710; includeSubDomains; preload',
@@ -8528,7 +8765,7 @@ AxiosError: Request failed with status code 403
           'NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600'
         ],
         'x-client-ip': '186.219.185.78',
-        'content-length': '81',
+        'content-length': '177',
         connection: 'close'
       },
       [Symbol(kHeadersCount)]: 44,
@@ -8590,13 +8827,13 @@ AxiosError: Request failed with status code 403
         maxRedirects: 21,
         maxBodyLength: Infinity,
         protocol: 'https:',
-        path: '/w/rest.php/wikibase/v0/entities/items/Q42',
-        method: 'GET',
+        path: '/w/rest.php/oauth2/access_token',
+        method: 'POST',
         headers: [Object: null prototype] {
           Accept: 'application/json, text/plain, */*',
-          Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-          'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+          'Content-Type': 'application/json',
           'User-Agent': 'axios/1.6.8',
+          'Content-Length': '141',
           'Accept-Encoding': 'gzip, compress, deflate, br'
         },
         agents: { http: undefined, https: undefined },
@@ -8754,7 +8991,10 @@ AxiosError: Request failed with status code 403
                           listener: [Function (anonymous)]
                         },
                         [Function: onClose],
-                        [Function: socketCloseListener]
+                        [Function: socketCloseListener],
+                        [Function: bound onceWrapper] {
+                          listener: [Function: onClose]
+                        }
                       ],
                       end: [
                         [Function: onConnectEnd],
@@ -8762,6 +9002,17 @@ AxiosError: Request failed with status code 403
                         [Function: socketOnEnd]
                       ],
                       newListener: [Function: keylogNewListener],
+                      connect: [
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function: connect]
+                        }
+                      ],
                       secure: [Function: onConnectSecure],
                       session: [Function (anonymous)],
                       free: [Function: onFree],
@@ -8771,8 +9022,8 @@ AxiosError: Request failed with status code 403
                       data: [Function: socketOnData],
                       drain: [Function: ondrain]
                     },
-                    _eventsCount: 11,
-                    connecting: false,
+                    _eventsCount: 12,
+                    connecting: true,
                     _hadError: false,
                     _parent: null,
                     _host: 'accounts.spotify.com',
@@ -8847,7 +9098,27 @@ AxiosError: Request failed with status code 403
                     },
                     allowHalfOpen: false,
                     _sockname: null,
-                    _pendingData: null,
+                    _pendingData: [
+                      {
+                        chunk: 'POST /api/token HTTP/1.1\r\n' +
+                          'Accept: application/json, text/plain, */*\r\n' +
+                          'Content-Type: application/x-www-form-urlencoded\r\n' +
+                          'User-Agent: axios/1.6.8\r\n' +
+                          'Content-Length: 119\r\n' +
+                          'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                          'Host: accounts.spotify.com\r\n' +
+                          'Connection: close\r\n' +
+                          '\r\n',
+                        encoding: 'latin1',
+                        callback: [Function: nop]
+                      },
+                      {
+                        chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                        encoding: 'buffer',
+                        callback: [Function (anonymous)]
+                      },
+                      allBuffers: false
+                    ],
                     _pendingEncoding: '',
                     server: undefined,
                     _server: null,
@@ -8859,7 +9130,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -9435,7 +9706,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -9455,7 +9726,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -9464,7 +9735,7 @@ AxiosError: Request failed with status code 403
                       onerror: [Function: onerror],
                       [Symbol(owner_symbol)]: [Circular *2]
                     },
-                    [Symbol(lastWriteQueueSize)]: 378,
+                    [Symbol(lastWriteQueueSize)]: 0,
                     [Symbol(timeout)]: null,
                     [Symbol(kBuffer)]: null,
                     [Symbol(kBufferCb)]: null,
@@ -9524,7 +9795,7 @@ AxiosError: Request failed with status code 403
               maxCachedSessions: 100,
               _sessionCache: {
                 map: {
-                  'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                  'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                 },
                 list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
               },
@@ -9536,17 +9807,17 @@ AxiosError: Request failed with status code 403
             request: [Function: request]
           }
         },
-        pathname: '/w/rest.php/wikibase/v0/entities/items/Q42'
+        pathname: '/w/rest.php/oauth2/access_token'
       },
       _ended: true,
       _ending: true,
       _redirectCount: 0,
       _redirects: [],
-      _requestBodyLength: 0,
+      _requestBodyLength: 141,
       _requestBodyBuffers: [],
       _onNativeResponse: [Function (anonymous)],
       _currentRequest: [Circular *1],
-      _currentUrl: 'https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/Q42',
+      _currentUrl: 'https://www.wikidata.org/w/rest.php/oauth2/access_token',
       [Symbol(kCapture)]: false
     },
     [Symbol(kCapture)]: false,
@@ -9556,12 +9827,9 @@ AxiosError: Request failed with status code 403
     [Symbol(corked)]: 0,
     [Symbol(kOutHeaders)]: [Object: null prototype] {
       accept: [ 'Accept', 'application/json, text/plain, */*' ],
-      authorization: [
-        'Authorization',
-        'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s'
-      ],
-      'api-user-agent': [ 'Api-User-Agent', 'movie-hub (joseppaludo@gmail.com)' ],
+      'content-type': [ 'Content-Type', 'application/json' ],
       'user-agent': [ 'User-Agent', 'axios/1.6.8' ],
+      'content-length': [ 'Content-Length', '141' ],
       'accept-encoding': [ 'Accept-Encoding', 'gzip, compress, deflate, br' ],
       host: [ 'Host', 'www.wikidata.org' ]
     },
@@ -9569,18 +9837,18 @@ AxiosError: Request failed with status code 403
     [Symbol(kUniqueHeaders)]: null
   },
   response: {
-    status: 403,
-    statusText: 'Forbidden',
+    status: 400,
+    statusText: 'Bad Request',
     headers: Object [AxiosHeaders] {
-      date: 'Wed, 01 May 2024 17:01:31 GMT',
+      date: 'Wed, 01 May 2024 17:15:27 GMT',
       server: 'mw-api-ext.eqiad.main-6568d96485-7z7s5',
       'x-content-type-options': 'nosniff',
-      'cache-control': 'no-cache',
+      'cache-control': 'private,no-cache,s-maxage=0',
       'access-control-allow-origin': '*',
       vary: 'Accept-Encoding',
       'content-type': 'application/json',
       age: '0',
-      'x-cache': 'cp1104 pass, cp1104 pass',
+      'x-cache': 'cp1104 miss, cp1104 pass',
       'x-cache-status': 'pass',
       'server-timing': 'cache;desc="pass", host;desc="cp1104"',
       'strict-transport-security': 'max-age=106384710; includeSubDomains; preload',
@@ -9593,7 +9861,7 @@ AxiosError: Request failed with status code 403
         'NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600'
       ],
       'x-client-ip': '186.219.185.78',
-      'content-length': '81',
+      'content-length': '177',
       connection: 'close'
     },
     config: {
@@ -9620,15 +9888,14 @@ AxiosError: Request failed with status code 403
       validateStatus: [Function: validateStatus],
       headers: Object [AxiosHeaders] {
         Accept: 'application/json, text/plain, */*',
-        'Content-Type': undefined,
-        Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-        'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+        'Content-Type': 'application/json',
         'User-Agent': 'axios/1.6.8',
+        'Content-Length': '141',
         'Accept-Encoding': 'gzip, compress, deflate, br'
       },
-      method: 'get',
-      url: 'https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/Q42',
-      data: undefined
+      method: 'post',
+      url: 'https://www.wikidata.org/w/rest.php/oauth2/access_token',
+      data: '{"grant_type":"client_credentials","client_id":"f1eaf401d045108de857f9150048f03f","client_secret":"91139e005084a2e34f08dcf7799679affc9bd2fe"}'
     },
     request: <ref *1> ClientRequest {
       _events: [Object: null prototype] {
@@ -9651,13 +9918,13 @@ AxiosError: Request failed with status code 403
       shouldKeepAlive: false,
       maxRequestsOnConnectionReached: false,
       _defaultKeepAlive: true,
-      useChunkedEncodingByDefault: false,
+      useChunkedEncodingByDefault: true,
       sendDate: false,
       _removedConnection: false,
       _removedContLen: false,
       _removedTE: false,
       strictContentLength: false,
-      _contentLength: 0,
+      _contentLength: '141',
       _hasBody: true,
       _trailer: '',
       finished: true,
@@ -9806,8 +10073,8 @@ AxiosError: Request failed with status code 403
         [Symbol(kSetNoDelay)]: false,
         [Symbol(kSetKeepAlive)]: true,
         [Symbol(kSetKeepAliveInitialDelay)]: 60,
-        [Symbol(kBytesRead)]: 1324,
-        [Symbol(kBytesWritten)]: 1447,
+        [Symbol(kBytesRead)]: 1442,
+        [Symbol(kBytesWritten)]: 400,
         [Symbol(connect-options)]: {
           rejectUnauthorized: true,
           ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
@@ -9817,12 +10084,12 @@ AxiosError: Request failed with status code 403
           maxBodyLength: Infinity,
           protocol: 'https:',
           path: null,
-          method: 'GET',
+          method: 'POST',
           headers: [Object: null prototype] {
             Accept: 'application/json, text/plain, */*',
-            Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-            'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+            'Content-Type': 'application/json',
             'User-Agent': 'axios/1.6.8',
+            'Content-Length': '141',
             'Accept-Encoding': 'gzip, compress, deflate, br'
           },
           agents: { http: undefined, https: undefined },
@@ -9980,7 +10247,10 @@ AxiosError: Request failed with status code 403
                             listener: [Function (anonymous)]
                           },
                           [Function: onClose],
-                          [Function: socketCloseListener]
+                          [Function: socketCloseListener],
+                          [Function: bound onceWrapper] {
+                            listener: [Function: onClose]
+                          }
                         ],
                         end: [
                           [Function: onConnectEnd],
@@ -9988,6 +10258,17 @@ AxiosError: Request failed with status code 403
                           [Function: socketOnEnd]
                         ],
                         newListener: [Function: keylogNewListener],
+                        connect: [
+                          [Function: bound onceWrapper] {
+                            listener: [Function (anonymous)]
+                          },
+                          [Function: bound onceWrapper] {
+                            listener: [Function (anonymous)]
+                          },
+                          [Function: bound onceWrapper] {
+                            listener: [Function: connect]
+                          }
+                        ],
                         secure: [Function: onConnectSecure],
                         session: [Function (anonymous)],
                         free: [Function: onFree],
@@ -9997,8 +10278,8 @@ AxiosError: Request failed with status code 403
                         data: [Function: socketOnData],
                         drain: [Function: ondrain]
                       },
-                      _eventsCount: 11,
-                      connecting: false,
+                      _eventsCount: 12,
+                      connecting: true,
                       _hadError: false,
                       _parent: null,
                       _host: 'accounts.spotify.com',
@@ -10073,7 +10354,27 @@ AxiosError: Request failed with status code 403
                       },
                       allowHalfOpen: false,
                       _sockname: null,
-                      _pendingData: null,
+                      _pendingData: [
+                        {
+                          chunk: 'POST /api/token HTTP/1.1\r\n' +
+                            'Accept: application/json, text/plain, */*\r\n' +
+                            'Content-Type: application/x-www-form-urlencoded\r\n' +
+                            'User-Agent: axios/1.6.8\r\n' +
+                            'Content-Length: 119\r\n' +
+                            'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                            'Host: accounts.spotify.com\r\n' +
+                            'Connection: close\r\n' +
+                            '\r\n',
+                          encoding: 'latin1',
+                          callback: [Function: nop]
+                        },
+                        {
+                          chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                          encoding: 'buffer',
+                          callback: [Function (anonymous)]
+                        },
+                        allBuffers: false
+                      ],
                       _pendingEncoding: '',
                       server: undefined,
                       _server: null,
@@ -10085,7 +10386,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -10661,7 +10962,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -10681,7 +10982,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -10690,7 +10991,7 @@ AxiosError: Request failed with status code 403
                         onerror: [Function: onerror],
                         [Symbol(owner_symbol)]: [Circular *2]
                       },
-                      [Symbol(lastWriteQueueSize)]: 378,
+                      [Symbol(lastWriteQueueSize)]: 0,
                       [Symbol(timeout)]: null,
                       [Symbol(kBuffer)]: null,
                       [Symbol(kBufferCb)]: null,
@@ -10750,7 +11051,7 @@ AxiosError: Request failed with status code 403
                 maxCachedSessions: 100,
                 _sessionCache: {
                   map: {
-                    'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                    'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                   },
                   list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
                 },
@@ -10762,7 +11063,7 @@ AxiosError: Request failed with status code 403
               request: [Function: request]
             }
           },
-          pathname: '/w/rest.php/wikibase/v0/entities/items/Q42',
+          pathname: '/w/rest.php/oauth2/access_token',
           _defaultAgent: <ref *3> Agent {
             _events: [Object: null prototype] {
               free: [Function (anonymous)],
@@ -10811,7 +11112,10 @@ AxiosError: Request failed with status code 403
                         listener: [Function (anonymous)]
                       },
                       [Function: onClose],
-                      [Function: socketCloseListener]
+                      [Function: socketCloseListener],
+                      [Function: bound onceWrapper] {
+                        listener: [Function: onClose]
+                      }
                     ],
                     end: [
                       [Function: onConnectEnd],
@@ -10819,6 +11123,17 @@ AxiosError: Request failed with status code 403
                       [Function: socketOnEnd]
                     ],
                     newListener: [Function: keylogNewListener],
+                    connect: [
+                      [Function: bound onceWrapper] {
+                        listener: [Function (anonymous)]
+                      },
+                      [Function: bound onceWrapper] {
+                        listener: [Function (anonymous)]
+                      },
+                      [Function: bound onceWrapper] {
+                        listener: [Function: connect]
+                      }
+                    ],
                     secure: [Function: onConnectSecure],
                     session: [Function (anonymous)],
                     free: [Function: onFree],
@@ -10828,8 +11143,8 @@ AxiosError: Request failed with status code 403
                     data: [Function: socketOnData],
                     drain: [Function: ondrain]
                   },
-                  _eventsCount: 11,
-                  connecting: false,
+                  _eventsCount: 12,
+                  connecting: true,
                   _hadError: false,
                   _parent: null,
                   _host: 'accounts.spotify.com',
@@ -10904,7 +11219,27 @@ AxiosError: Request failed with status code 403
                   },
                   allowHalfOpen: false,
                   _sockname: null,
-                  _pendingData: null,
+                  _pendingData: [
+                    {
+                      chunk: 'POST /api/token HTTP/1.1\r\n' +
+                        'Accept: application/json, text/plain, */*\r\n' +
+                        'Content-Type: application/x-www-form-urlencoded\r\n' +
+                        'User-Agent: axios/1.6.8\r\n' +
+                        'Content-Length: 119\r\n' +
+                        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                        'Host: accounts.spotify.com\r\n' +
+                        'Connection: close\r\n' +
+                        '\r\n',
+                      encoding: 'latin1',
+                      callback: [Function: nop]
+                    },
+                    {
+                      chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                      encoding: 'buffer',
+                      callback: [Function (anonymous)]
+                    },
+                    allBuffers: false
+                  ],
                   _pendingEncoding: '',
                   server: undefined,
                   _server: null,
@@ -10916,7 +11251,7 @@ AxiosError: Request failed with status code 403
                     },
                     _parentWrap: undefined,
                     _secureContext: SecureContext { context: SecureContext {} },
-                    reading: true,
+                    reading: false,
                     onkeylog: [Function: onkeylog],
                     onhandshakestart: {},
                     onhandshakedone: [Function (anonymous)],
@@ -11810,7 +12145,7 @@ AxiosError: Request failed with status code 403
                     },
                     _parentWrap: undefined,
                     _secureContext: SecureContext { context: SecureContext {} },
-                    reading: true,
+                    reading: false,
                     onkeylog: [Function: onkeylog],
                     onhandshakestart: {},
                     onhandshakedone: [Function (anonymous)],
@@ -11830,7 +12165,7 @@ AxiosError: Request failed with status code 403
                     },
                     _parentWrap: undefined,
                     _secureContext: SecureContext { context: SecureContext {} },
-                    reading: true,
+                    reading: false,
                     onkeylog: [Function: onkeylog],
                     onhandshakestart: {},
                     onhandshakedone: [Function (anonymous)],
@@ -11839,7 +12174,7 @@ AxiosError: Request failed with status code 403
                     onerror: [Function: onerror],
                     [Symbol(owner_symbol)]: [Circular *2]
                   },
-                  [Symbol(lastWriteQueueSize)]: 378,
+                  [Symbol(lastWriteQueueSize)]: 0,
                   [Symbol(timeout)]: null,
                   [Symbol(kBuffer)]: null,
                   [Symbol(kBufferCb)]: null,
@@ -12006,7 +12341,7 @@ AxiosError: Request failed with status code 403
             maxCachedSessions: 100,
             _sessionCache: {
               map: {
-                'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
               },
               list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
             },
@@ -12020,11 +12355,11 @@ AxiosError: Request failed with status code 403
           singleUse: true
         }
       },
-      _header: 'GET /w/rest.php/wikibase/v0/entities/items/Q42 HTTP/1.1\r\n' +
+      _header: 'POST /w/rest.php/oauth2/access_token HTTP/1.1\r\n' +
         'Accept: application/json, text/plain, */*\r\n' +
-        'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s\r\n' +
-        'Api-User-Agent: movie-hub (joseppaludo@gmail.com)\r\n' +
+        'Content-Type: application/json\r\n' +
         'User-Agent: axios/1.6.8\r\n' +
+        'Content-Length: 141\r\n' +
         'Accept-Encoding: gzip, compress, deflate, br\r\n' +
         'Host: www.wikidata.org\r\n' +
         'Connection: close\r\n' +
@@ -12079,7 +12414,10 @@ AxiosError: Request failed with status code 403
                     listener: [Function (anonymous)]
                   },
                   [Function: onClose],
-                  [Function: socketCloseListener]
+                  [Function: socketCloseListener],
+                  [Function: bound onceWrapper] {
+                    listener: [Function: onClose]
+                  }
                 ],
                 end: [
                   [Function: onConnectEnd],
@@ -12087,6 +12425,17 @@ AxiosError: Request failed with status code 403
                   [Function: socketOnEnd]
                 ],
                 newListener: [Function: keylogNewListener],
+                connect: [
+                  [Function: bound onceWrapper] {
+                    listener: [Function (anonymous)]
+                  },
+                  [Function: bound onceWrapper] {
+                    listener: [Function (anonymous)]
+                  },
+                  [Function: bound onceWrapper] {
+                    listener: [Function: connect]
+                  }
+                ],
                 secure: [Function: onConnectSecure],
                 session: [Function (anonymous)],
                 free: [Function: onFree],
@@ -12096,8 +12445,8 @@ AxiosError: Request failed with status code 403
                 data: [Function: socketOnData],
                 drain: [Function: ondrain]
               },
-              _eventsCount: 11,
-              connecting: false,
+              _eventsCount: 12,
+              connecting: true,
               _hadError: false,
               _parent: null,
               _host: 'accounts.spotify.com',
@@ -12172,7 +12521,27 @@ AxiosError: Request failed with status code 403
               },
               allowHalfOpen: false,
               _sockname: null,
-              _pendingData: null,
+              _pendingData: [
+                {
+                  chunk: 'POST /api/token HTTP/1.1\r\n' +
+                    'Accept: application/json, text/plain, */*\r\n' +
+                    'Content-Type: application/x-www-form-urlencoded\r\n' +
+                    'User-Agent: axios/1.6.8\r\n' +
+                    'Content-Length: 119\r\n' +
+                    'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                    'Host: accounts.spotify.com\r\n' +
+                    'Connection: close\r\n' +
+                    '\r\n',
+                  encoding: 'latin1',
+                  callback: [Function: nop]
+                },
+                {
+                  chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                  encoding: 'buffer',
+                  callback: [Function (anonymous)]
+                },
+                allBuffers: false
+              ],
               _pendingEncoding: '',
               server: undefined,
               _server: null,
@@ -12184,7 +12553,7 @@ AxiosError: Request failed with status code 403
                 },
                 _parentWrap: undefined,
                 _secureContext: SecureContext { context: SecureContext {} },
-                reading: true,
+                reading: false,
                 onkeylog: [Function: onkeylog],
                 onhandshakestart: {},
                 onhandshakedone: [Function (anonymous)],
@@ -13069,7 +13438,7 @@ AxiosError: Request failed with status code 403
                 },
                 _parentWrap: undefined,
                 _secureContext: SecureContext { context: SecureContext {} },
-                reading: true,
+                reading: false,
                 onkeylog: [Function: onkeylog],
                 onhandshakestart: {},
                 onhandshakedone: [Function (anonymous)],
@@ -13089,7 +13458,7 @@ AxiosError: Request failed with status code 403
                 },
                 _parentWrap: undefined,
                 _secureContext: SecureContext { context: SecureContext {} },
-                reading: true,
+                reading: false,
                 onkeylog: [Function: onkeylog],
                 onhandshakestart: {},
                 onhandshakedone: [Function (anonymous)],
@@ -13098,7 +13467,7 @@ AxiosError: Request failed with status code 403
                 onerror: [Function: onerror],
                 [Symbol(owner_symbol)]: [Circular *2]
               },
-              [Symbol(lastWriteQueueSize)]: 378,
+              [Symbol(lastWriteQueueSize)]: 0,
               [Symbol(timeout)]: null,
               [Symbol(kBuffer)]: null,
               [Symbol(kBufferCb)]: null,
@@ -13263,18 +13632,18 @@ AxiosError: Request failed with status code 403
         maxCachedSessions: 100,
         _sessionCache: {
           map: {
-            'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+            'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
           },
           list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
         },
         [Symbol(kCapture)]: false
       },
       socketPath: undefined,
-      method: 'GET',
+      method: 'POST',
       maxHeaderSize: undefined,
       insecureHTTPParser: undefined,
       joinDuplicateHeaders: undefined,
-      path: '/w/rest.php/wikibase/v0/entities/items/Q42',
+      path: '/w/rest.php/oauth2/access_token',
       _ended: true,
       res: IncomingMessage {
         _readableState: ReadableState {
@@ -13472,8 +13841,8 @@ AxiosError: Request failed with status code 403
           [Symbol(kSetNoDelay)]: false,
           [Symbol(kSetKeepAlive)]: true,
           [Symbol(kSetKeepAliveInitialDelay)]: 60,
-          [Symbol(kBytesRead)]: 1324,
-          [Symbol(kBytesWritten)]: 1447,
+          [Symbol(kBytesRead)]: 1442,
+          [Symbol(kBytesWritten)]: 400,
           [Symbol(connect-options)]: {
             rejectUnauthorized: true,
             ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
@@ -13483,12 +13852,12 @@ AxiosError: Request failed with status code 403
             maxBodyLength: Infinity,
             protocol: 'https:',
             path: null,
-            method: 'GET',
+            method: 'POST',
             headers: [Object: null prototype] {
               Accept: 'application/json, text/plain, */*',
-              Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-              'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+              'Content-Type': 'application/json',
               'User-Agent': 'axios/1.6.8',
+              'Content-Length': '141',
               'Accept-Encoding': 'gzip, compress, deflate, br'
             },
             agents: { http: undefined, https: undefined },
@@ -13649,7 +14018,10 @@ AxiosError: Request failed with status code 403
                               listener: [Function (anonymous)]
                             },
                             [Function: onClose],
-                            [Function: socketCloseListener]
+                            [Function: socketCloseListener],
+                            [Function: bound onceWrapper] {
+                              listener: [Function: onClose]
+                            }
                           ],
                           end: [
                             [Function: onConnectEnd],
@@ -13657,6 +14029,17 @@ AxiosError: Request failed with status code 403
                             [Function: socketOnEnd]
                           ],
                           newListener: [Function: keylogNewListener],
+                          connect: [
+                            [Function: bound onceWrapper] {
+                              listener: [Function (anonymous)]
+                            },
+                            [Function: bound onceWrapper] {
+                              listener: [Function (anonymous)]
+                            },
+                            [Function: bound onceWrapper] {
+                              listener: [Function: connect]
+                            }
+                          ],
                           secure: [Function: onConnectSecure],
                           session: [Function (anonymous)],
                           free: [Function: onFree],
@@ -13666,8 +14049,8 @@ AxiosError: Request failed with status code 403
                           data: [Function: socketOnData],
                           drain: [Function: ondrain]
                         },
-                        _eventsCount: 11,
-                        connecting: false,
+                        _eventsCount: 12,
+                        connecting: true,
                         _hadError: false,
                         _parent: null,
                         _host: 'accounts.spotify.com',
@@ -13742,7 +14125,27 @@ AxiosError: Request failed with status code 403
                         },
                         allowHalfOpen: false,
                         _sockname: null,
-                        _pendingData: null,
+                        _pendingData: [
+                          {
+                            chunk: 'POST /api/token HTTP/1.1\r\n' +
+                              'Accept: application/json, text/plain, */*\r\n' +
+                              'Content-Type: application/x-www-form-urlencoded\r\n' +
+                              'User-Agent: axios/1.6.8\r\n' +
+                              'Content-Length: 119\r\n' +
+                              'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                              'Host: accounts.spotify.com\r\n' +
+                              'Connection: close\r\n' +
+                              '\r\n',
+                            encoding: 'latin1',
+                            callback: [Function: nop]
+                          },
+                          {
+                            chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                            encoding: 'buffer',
+                            callback: [Function (anonymous)]
+                          },
+                          allBuffers: false
+                        ],
                         _pendingEncoding: '',
                         server: undefined,
                         _server: null,
@@ -13754,7 +14157,7 @@ AxiosError: Request failed with status code 403
                           },
                           _parentWrap: undefined,
                           _secureContext: SecureContext { context: SecureContext {} },
-                          reading: true,
+                          reading: false,
                           onkeylog: [Function: onkeylog],
                           onhandshakestart: {},
                           onhandshakedone: [Function (anonymous)],
@@ -14330,7 +14733,7 @@ AxiosError: Request failed with status code 403
                           },
                           _parentWrap: undefined,
                           _secureContext: SecureContext { context: SecureContext {} },
-                          reading: true,
+                          reading: false,
                           onkeylog: [Function: onkeylog],
                           onhandshakestart: {},
                           onhandshakedone: [Function (anonymous)],
@@ -14350,7 +14753,7 @@ AxiosError: Request failed with status code 403
                           },
                           _parentWrap: undefined,
                           _secureContext: SecureContext { context: SecureContext {} },
-                          reading: true,
+                          reading: false,
                           onkeylog: [Function: onkeylog],
                           onhandshakestart: {},
                           onhandshakedone: [Function (anonymous)],
@@ -14359,7 +14762,7 @@ AxiosError: Request failed with status code 403
                           onerror: [Function: onerror],
                           [Symbol(owner_symbol)]: [Circular *2]
                         },
-                        [Symbol(lastWriteQueueSize)]: 378,
+                        [Symbol(lastWriteQueueSize)]: 0,
                         [Symbol(timeout)]: null,
                         [Symbol(kBuffer)]: null,
                         [Symbol(kBufferCb)]: null,
@@ -14419,7 +14822,7 @@ AxiosError: Request failed with status code 403
                   maxCachedSessions: 100,
                   _sessionCache: {
                     map: {
-                      'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                      'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                     },
                     list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
                   },
@@ -14431,7 +14834,7 @@ AxiosError: Request failed with status code 403
                 request: [Function: request]
               }
             },
-            pathname: '/w/rest.php/wikibase/v0/entities/items/Q42',
+            pathname: '/w/rest.php/oauth2/access_token',
             _defaultAgent: <ref *3> Agent {
               _events: [Object: null prototype] {
                 free: [Function (anonymous)],
@@ -14480,7 +14883,10 @@ AxiosError: Request failed with status code 403
                           listener: [Function (anonymous)]
                         },
                         [Function: onClose],
-                        [Function: socketCloseListener]
+                        [Function: socketCloseListener],
+                        [Function: bound onceWrapper] {
+                          listener: [Function: onClose]
+                        }
                       ],
                       end: [
                         [Function: onConnectEnd],
@@ -14488,6 +14894,17 @@ AxiosError: Request failed with status code 403
                         [Function: socketOnEnd]
                       ],
                       newListener: [Function: keylogNewListener],
+                      connect: [
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function: connect]
+                        }
+                      ],
                       secure: [Function: onConnectSecure],
                       session: [Function (anonymous)],
                       free: [Function: onFree],
@@ -14497,8 +14914,8 @@ AxiosError: Request failed with status code 403
                       data: [Function: socketOnData],
                       drain: [Function: ondrain]
                     },
-                    _eventsCount: 11,
-                    connecting: false,
+                    _eventsCount: 12,
+                    connecting: true,
                     _hadError: false,
                     _parent: null,
                     _host: 'accounts.spotify.com',
@@ -14573,7 +14990,27 @@ AxiosError: Request failed with status code 403
                     },
                     allowHalfOpen: false,
                     _sockname: null,
-                    _pendingData: null,
+                    _pendingData: [
+                      {
+                        chunk: 'POST /api/token HTTP/1.1\r\n' +
+                          'Accept: application/json, text/plain, */*\r\n' +
+                          'Content-Type: application/x-www-form-urlencoded\r\n' +
+                          'User-Agent: axios/1.6.8\r\n' +
+                          'Content-Length: 119\r\n' +
+                          'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                          'Host: accounts.spotify.com\r\n' +
+                          'Connection: close\r\n' +
+                          '\r\n',
+                        encoding: 'latin1',
+                        callback: [Function: nop]
+                      },
+                      {
+                        chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                        encoding: 'buffer',
+                        callback: [Function (anonymous)]
+                      },
+                      allBuffers: false
+                    ],
                     _pendingEncoding: '',
                     server: undefined,
                     _server: null,
@@ -14585,7 +15022,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -15482,7 +15919,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -15502,7 +15939,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -15511,7 +15948,7 @@ AxiosError: Request failed with status code 403
                       onerror: [Function: onerror],
                       [Symbol(owner_symbol)]: [Circular *2]
                     },
-                    [Symbol(lastWriteQueueSize)]: 378,
+                    [Symbol(lastWriteQueueSize)]: 0,
                     [Symbol(timeout)]: null,
                     [Symbol(kBuffer)]: null,
                     [Symbol(kBufferCb)]: null,
@@ -15678,7 +16115,7 @@ AxiosError: Request failed with status code 403
               maxCachedSessions: 100,
               _sessionCache: {
                 map: {
-                  'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                  'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                 },
                 list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
               },
@@ -15698,13 +16135,13 @@ AxiosError: Request failed with status code 403
         complete: true,
         rawHeaders: [
           'date',
-          'Wed, 01 May 2024 17:01:31 GMT',
+          'Wed, 01 May 2024 17:15:27 GMT',
           'server',
           'mw-api-ext.eqiad.main-6568d96485-7z7s5',
           'x-content-type-options',
           'nosniff',
           'cache-control',
-          'no-cache',
+          'private,no-cache,s-maxage=0',
           'access-control-allow-origin',
           '*',
           'vary',
@@ -15716,7 +16153,7 @@ AxiosError: Request failed with status code 403
           'age',
           '0',
           'x-cache',
-          'cp1104 pass, cp1104 pass',
+          'cp1104 miss, cp1104 pass',
           'x-cache-status',
           'pass',
           'server-timing',
@@ -15738,7 +16175,7 @@ AxiosError: Request failed with status code 403
           'set-cookie',
           'NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600',
           'content-length',
-          '81',
+          '177',
           'connection',
           'close'
         ],
@@ -15748,8 +16185,8 @@ AxiosError: Request failed with status code 403
         upgrade: false,
         url: '',
         method: null,
-        statusCode: 403,
-        statusMessage: 'Forbidden',
+        statusCode: 400,
+        statusMessage: 'Bad Request',
         client: TLSSocket {
           _tlsOptions: {
             allowHalfOpen: undefined,
@@ -15893,8 +16330,8 @@ AxiosError: Request failed with status code 403
           [Symbol(kSetNoDelay)]: false,
           [Symbol(kSetKeepAlive)]: true,
           [Symbol(kSetKeepAliveInitialDelay)]: 60,
-          [Symbol(kBytesRead)]: 1324,
-          [Symbol(kBytesWritten)]: 1447,
+          [Symbol(kBytesRead)]: 1442,
+          [Symbol(kBytesWritten)]: 400,
           [Symbol(connect-options)]: {
             rejectUnauthorized: true,
             ciphers: 'TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA',
@@ -15904,12 +16341,12 @@ AxiosError: Request failed with status code 403
             maxBodyLength: Infinity,
             protocol: 'https:',
             path: null,
-            method: 'GET',
+            method: 'POST',
             headers: [Object: null prototype] {
               Accept: 'application/json, text/plain, */*',
-              Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-              'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+              'Content-Type': 'application/json',
               'User-Agent': 'axios/1.6.8',
+              'Content-Length': '141',
               'Accept-Encoding': 'gzip, compress, deflate, br'
             },
             agents: { http: undefined, https: undefined },
@@ -16070,7 +16507,10 @@ AxiosError: Request failed with status code 403
                               listener: [Function (anonymous)]
                             },
                             [Function: onClose],
-                            [Function: socketCloseListener]
+                            [Function: socketCloseListener],
+                            [Function: bound onceWrapper] {
+                              listener: [Function: onClose]
+                            }
                           ],
                           end: [
                             [Function: onConnectEnd],
@@ -16078,6 +16518,17 @@ AxiosError: Request failed with status code 403
                             [Function: socketOnEnd]
                           ],
                           newListener: [Function: keylogNewListener],
+                          connect: [
+                            [Function: bound onceWrapper] {
+                              listener: [Function (anonymous)]
+                            },
+                            [Function: bound onceWrapper] {
+                              listener: [Function (anonymous)]
+                            },
+                            [Function: bound onceWrapper] {
+                              listener: [Function: connect]
+                            }
+                          ],
                           secure: [Function: onConnectSecure],
                           session: [Function (anonymous)],
                           free: [Function: onFree],
@@ -16087,8 +16538,8 @@ AxiosError: Request failed with status code 403
                           data: [Function: socketOnData],
                           drain: [Function: ondrain]
                         },
-                        _eventsCount: 11,
-                        connecting: false,
+                        _eventsCount: 12,
+                        connecting: true,
                         _hadError: false,
                         _parent: null,
                         _host: 'accounts.spotify.com',
@@ -16163,7 +16614,27 @@ AxiosError: Request failed with status code 403
                         },
                         allowHalfOpen: false,
                         _sockname: null,
-                        _pendingData: null,
+                        _pendingData: [
+                          {
+                            chunk: 'POST /api/token HTTP/1.1\r\n' +
+                              'Accept: application/json, text/plain, */*\r\n' +
+                              'Content-Type: application/x-www-form-urlencoded\r\n' +
+                              'User-Agent: axios/1.6.8\r\n' +
+                              'Content-Length: 119\r\n' +
+                              'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                              'Host: accounts.spotify.com\r\n' +
+                              'Connection: close\r\n' +
+                              '\r\n',
+                            encoding: 'latin1',
+                            callback: [Function: nop]
+                          },
+                          {
+                            chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                            encoding: 'buffer',
+                            callback: [Function (anonymous)]
+                          },
+                          allBuffers: false
+                        ],
                         _pendingEncoding: '',
                         server: undefined,
                         _server: null,
@@ -16175,7 +16646,7 @@ AxiosError: Request failed with status code 403
                           },
                           _parentWrap: undefined,
                           _secureContext: SecureContext { context: SecureContext {} },
-                          reading: true,
+                          reading: false,
                           onkeylog: [Function: onkeylog],
                           onhandshakestart: {},
                           onhandshakedone: [Function (anonymous)],
@@ -16751,7 +17222,7 @@ AxiosError: Request failed with status code 403
                           },
                           _parentWrap: undefined,
                           _secureContext: SecureContext { context: SecureContext {} },
-                          reading: true,
+                          reading: false,
                           onkeylog: [Function: onkeylog],
                           onhandshakestart: {},
                           onhandshakedone: [Function (anonymous)],
@@ -16771,7 +17242,7 @@ AxiosError: Request failed with status code 403
                           },
                           _parentWrap: undefined,
                           _secureContext: SecureContext { context: SecureContext {} },
-                          reading: true,
+                          reading: false,
                           onkeylog: [Function: onkeylog],
                           onhandshakestart: {},
                           onhandshakedone: [Function (anonymous)],
@@ -16780,7 +17251,7 @@ AxiosError: Request failed with status code 403
                           onerror: [Function: onerror],
                           [Symbol(owner_symbol)]: [Circular *2]
                         },
-                        [Symbol(lastWriteQueueSize)]: 378,
+                        [Symbol(lastWriteQueueSize)]: 0,
                         [Symbol(timeout)]: null,
                         [Symbol(kBuffer)]: null,
                         [Symbol(kBufferCb)]: null,
@@ -16840,7 +17311,7 @@ AxiosError: Request failed with status code 403
                   maxCachedSessions: 100,
                   _sessionCache: {
                     map: {
-                      'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                      'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                     },
                     list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
                   },
@@ -16852,7 +17323,7 @@ AxiosError: Request failed with status code 403
                 request: [Function: request]
               }
             },
-            pathname: '/w/rest.php/wikibase/v0/entities/items/Q42',
+            pathname: '/w/rest.php/oauth2/access_token',
             _defaultAgent: <ref *3> Agent {
               _events: [Object: null prototype] {
                 free: [Function (anonymous)],
@@ -16901,7 +17372,10 @@ AxiosError: Request failed with status code 403
                           listener: [Function (anonymous)]
                         },
                         [Function: onClose],
-                        [Function: socketCloseListener]
+                        [Function: socketCloseListener],
+                        [Function: bound onceWrapper] {
+                          listener: [Function: onClose]
+                        }
                       ],
                       end: [
                         [Function: onConnectEnd],
@@ -16909,6 +17383,17 @@ AxiosError: Request failed with status code 403
                         [Function: socketOnEnd]
                       ],
                       newListener: [Function: keylogNewListener],
+                      connect: [
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function (anonymous)]
+                        },
+                        [Function: bound onceWrapper] {
+                          listener: [Function: connect]
+                        }
+                      ],
                       secure: [Function: onConnectSecure],
                       session: [Function (anonymous)],
                       free: [Function: onFree],
@@ -16918,8 +17403,8 @@ AxiosError: Request failed with status code 403
                       data: [Function: socketOnData],
                       drain: [Function: ondrain]
                     },
-                    _eventsCount: 11,
-                    connecting: false,
+                    _eventsCount: 12,
+                    connecting: true,
                     _hadError: false,
                     _parent: null,
                     _host: 'accounts.spotify.com',
@@ -16994,7 +17479,27 @@ AxiosError: Request failed with status code 403
                     },
                     allowHalfOpen: false,
                     _sockname: null,
-                    _pendingData: null,
+                    _pendingData: [
+                      {
+                        chunk: 'POST /api/token HTTP/1.1\r\n' +
+                          'Accept: application/json, text/plain, */*\r\n' +
+                          'Content-Type: application/x-www-form-urlencoded\r\n' +
+                          'User-Agent: axios/1.6.8\r\n' +
+                          'Content-Length: 119\r\n' +
+                          'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                          'Host: accounts.spotify.com\r\n' +
+                          'Connection: close\r\n' +
+                          '\r\n',
+                        encoding: 'latin1',
+                        callback: [Function: nop]
+                      },
+                      {
+                        chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                        encoding: 'buffer',
+                        callback: [Function (anonymous)]
+                      },
+                      allBuffers: false
+                    ],
                     _pendingEncoding: '',
                     server: undefined,
                     _server: null,
@@ -17006,7 +17511,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -17903,7 +18408,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -17923,7 +18428,7 @@ AxiosError: Request failed with status code 403
                       },
                       _parentWrap: undefined,
                       _secureContext: SecureContext { context: SecureContext {} },
-                      reading: true,
+                      reading: false,
                       onkeylog: [Function: onkeylog],
                       onhandshakestart: {},
                       onhandshakedone: [Function (anonymous)],
@@ -17932,7 +18437,7 @@ AxiosError: Request failed with status code 403
                       onerror: [Function: onerror],
                       [Symbol(owner_symbol)]: [Circular *2]
                     },
-                    [Symbol(lastWriteQueueSize)]: 378,
+                    [Symbol(lastWriteQueueSize)]: 0,
                     [Symbol(timeout)]: null,
                     [Symbol(kBuffer)]: null,
                     [Symbol(kBufferCb)]: null,
@@ -18099,7 +18604,7 @@ AxiosError: Request failed with status code 403
               maxCachedSessions: 100,
               _sessionCache: {
                 map: {
-                  'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                  'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                 },
                 list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
               },
@@ -18116,19 +18621,19 @@ AxiosError: Request failed with status code 403
         _consuming: false,
         _dumped: false,
         req: [Circular *1],
-        responseUrl: 'https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/Q42',
+        responseUrl: 'https://www.wikidata.org/w/rest.php/oauth2/access_token',
         redirects: [],
         [Symbol(kCapture)]: false,
         [Symbol(kHeaders)]: {
-          date: 'Wed, 01 May 2024 17:01:31 GMT',
+          date: 'Wed, 01 May 2024 17:15:27 GMT',
           server: 'mw-api-ext.eqiad.main-6568d96485-7z7s5',
           'x-content-type-options': 'nosniff',
-          'cache-control': 'no-cache',
+          'cache-control': 'private,no-cache,s-maxage=0',
           'access-control-allow-origin': '*',
           vary: 'Accept-Encoding',
           'content-type': 'application/json',
           age: '0',
-          'x-cache': 'cp1104 pass, cp1104 pass',
+          'x-cache': 'cp1104 miss, cp1104 pass',
           'x-cache-status': 'pass',
           'server-timing': 'cache;desc="pass", host;desc="cp1104"',
           'strict-transport-security': 'max-age=106384710; includeSubDomains; preload',
@@ -18141,7 +18646,7 @@ AxiosError: Request failed with status code 403
             'NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600'
           ],
           'x-client-ip': '186.219.185.78',
-          'content-length': '81',
+          'content-length': '177',
           connection: 'close'
         },
         [Symbol(kHeadersCount)]: 44,
@@ -18203,13 +18708,13 @@ AxiosError: Request failed with status code 403
           maxRedirects: 21,
           maxBodyLength: Infinity,
           protocol: 'https:',
-          path: '/w/rest.php/wikibase/v0/entities/items/Q42',
-          method: 'GET',
+          path: '/w/rest.php/oauth2/access_token',
+          method: 'POST',
           headers: [Object: null prototype] {
             Accept: 'application/json, text/plain, */*',
-            Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s',
-            'Api-User-Agent': 'movie-hub (joseppaludo@gmail.com)',
+            'Content-Type': 'application/json',
             'User-Agent': 'axios/1.6.8',
+            'Content-Length': '141',
             'Accept-Encoding': 'gzip, compress, deflate, br'
           },
           agents: { http: undefined, https: undefined },
@@ -18367,7 +18872,10 @@ AxiosError: Request failed with status code 403
                             listener: [Function (anonymous)]
                           },
                           [Function: onClose],
-                          [Function: socketCloseListener]
+                          [Function: socketCloseListener],
+                          [Function: bound onceWrapper] {
+                            listener: [Function: onClose]
+                          }
                         ],
                         end: [
                           [Function: onConnectEnd],
@@ -18375,6 +18883,17 @@ AxiosError: Request failed with status code 403
                           [Function: socketOnEnd]
                         ],
                         newListener: [Function: keylogNewListener],
+                        connect: [
+                          [Function: bound onceWrapper] {
+                            listener: [Function (anonymous)]
+                          },
+                          [Function: bound onceWrapper] {
+                            listener: [Function (anonymous)]
+                          },
+                          [Function: bound onceWrapper] {
+                            listener: [Function: connect]
+                          }
+                        ],
                         secure: [Function: onConnectSecure],
                         session: [Function (anonymous)],
                         free: [Function: onFree],
@@ -18384,8 +18903,8 @@ AxiosError: Request failed with status code 403
                         data: [Function: socketOnData],
                         drain: [Function: ondrain]
                       },
-                      _eventsCount: 11,
-                      connecting: false,
+                      _eventsCount: 12,
+                      connecting: true,
                       _hadError: false,
                       _parent: null,
                       _host: 'accounts.spotify.com',
@@ -18460,7 +18979,27 @@ AxiosError: Request failed with status code 403
                       },
                       allowHalfOpen: false,
                       _sockname: null,
-                      _pendingData: null,
+                      _pendingData: [
+                        {
+                          chunk: 'POST /api/token HTTP/1.1\r\n' +
+                            'Accept: application/json, text/plain, */*\r\n' +
+                            'Content-Type: application/x-www-form-urlencoded\r\n' +
+                            'User-Agent: axios/1.6.8\r\n' +
+                            'Content-Length: 119\r\n' +
+                            'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+                            'Host: accounts.spotify.com\r\n' +
+                            'Connection: close\r\n' +
+                            '\r\n',
+                          encoding: 'latin1',
+                          callback: [Function: nop]
+                        },
+                        {
+                          chunk: <Buffer 67 72 61 6e 74 5f 74 79 70 65 3d 63 6c 69 65 6e 74 5f 63 72 65 64 65 6e 74 69 61 6c 73 26 63 6c 69 65 6e 74 5f 69 64 3d 65 62 63 63 39 39 31 32 34 30 ... 69 more bytes>,
+                          encoding: 'buffer',
+                          callback: [Function (anonymous)]
+                        },
+                        allBuffers: false
+                      ],
                       _pendingEncoding: '',
                       server: undefined,
                       _server: null,
@@ -18472,7 +19011,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -19048,7 +19587,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -19068,7 +19607,7 @@ AxiosError: Request failed with status code 403
                         },
                         _parentWrap: undefined,
                         _secureContext: SecureContext { context: SecureContext {} },
-                        reading: true,
+                        reading: false,
                         onkeylog: [Function: onkeylog],
                         onhandshakestart: {},
                         onhandshakedone: [Function (anonymous)],
@@ -19077,7 +19616,7 @@ AxiosError: Request failed with status code 403
                         onerror: [Function: onerror],
                         [Symbol(owner_symbol)]: [Circular *2]
                       },
-                      [Symbol(lastWriteQueueSize)]: 378,
+                      [Symbol(lastWriteQueueSize)]: 0,
                       [Symbol(timeout)]: null,
                       [Symbol(kBuffer)]: null,
                       [Symbol(kBufferCb)]: null,
@@ -19137,7 +19676,7 @@ AxiosError: Request failed with status code 403
                 maxCachedSessions: 100,
                 _sessionCache: {
                   map: {
-                    'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7e 02 01 01 02 02 03 04 04 02 13 02 04 20 24 53 70 64 86 0b c5 33 18 d8 9d f8 0f a3 c9 a7 37 42 d8 30 89 13 d4 72 6f 35 60 a7 6f 95 b7 7d 04 ... 2128 more bytes>
+                    'www.wikidata.org:443:::::::::::::::::::::': <Buffer 30 82 08 7d 02 01 01 02 02 03 04 04 02 13 02 04 20 49 81 10 e3 ea 7d 84 9b e4 63 a1 f3 bf 02 aa db cd 63 84 bf 4f 51 15 cc 96 ff a3 1c ef 0f 60 a7 04 ... 2127 more bytes>
                   },
                   list: [ 'www.wikidata.org:443:::::::::::::::::::::' ]
                 },
@@ -19149,17 +19688,17 @@ AxiosError: Request failed with status code 403
               request: [Function: request]
             }
           },
-          pathname: '/w/rest.php/wikibase/v0/entities/items/Q42'
+          pathname: '/w/rest.php/oauth2/access_token'
         },
         _ended: true,
         _ending: true,
         _redirectCount: 0,
         _redirects: [],
-        _requestBodyLength: 0,
+        _requestBodyLength: 141,
         _requestBodyBuffers: [],
         _onNativeResponse: [Function (anonymous)],
         _currentRequest: [Circular *1],
-        _currentUrl: 'https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/Q42',
+        _currentUrl: 'https://www.wikidata.org/w/rest.php/oauth2/access_token',
         [Symbol(kCapture)]: false
       },
       [Symbol(kCapture)]: false,
@@ -19169,12 +19708,9 @@ AxiosError: Request failed with status code 403
       [Symbol(corked)]: 0,
       [Symbol(kOutHeaders)]: [Object: null prototype] {
         accept: [ 'Accept', 'application/json, text/plain, */*' ],
-        authorization: [
-          'Authorization',
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmMWVhZjQwMWQwNDUxMDhkZTg1N2Y5MTUwMDQ4ZjAzZiIsImp0aSI6ImZiNTgxN2E0MjlmM2U4OTEwNDQ0ZGY4ZDNkOTA3OTE1OWQ2MDA4ZTUxMmM1NWMyMWIzMjcxZmFlNWM2OThjNWZhZmI0N2Q1NmI0ODY5NjIxIiwiaWF0IjoxNzE0NTczMzM2LjM3NzM4LCJuYmYiOjE3MTQ1NzMzMzYuMzc3Mzg1LCJleHAiOjMzMjcxNDgyMTM2LjM3NTc4LCJzdWIiOiI3NTU1NTY1NSIsImlzcyI6Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnIiwicmF0ZWxpbWl0Ijp7InJlcXVlc3RzX3Blcl91bml0Ijo1MDAwLCJ1bml0IjoiSE9VUiJ9LCJzY29wZXMiOlsiYmFzaWMiXX0.vfMwtRo4HaSGDQlnje-QDp483LWMFhDq_wzteFS4PZwc_pcHD3EyP-VHrCufii92OfXlkxOURV20V1c5sypBOshjXht07tsBMiR7wFzljGqvvnm2p10doCPGsEVOJbkcVkVtGsRYuSBWtn5XdbCieaGRsdJmlFnp72LfNURwMgZ2K7FSerLyldKucXWVEz5XV6z6sCmZrcAHllzfPT_wDwv8B31vxEj4UPkRDP4_V-RR_6N9D65wfnfuxgZUKNm8nmanLNBqkfPfATNtWfByMNDh2dCF0HVm1nFaJCJGA3VTWBUHlvbqodXRh3Nt8znthO9_Io_EZ9sEzPEjZ-Y3jA8nIZyv04MPFahhDRXn1su7q0zhi4iQTXk2nhfKYI4Ic92cnpyyq2HgrEism9EqImYcOXKqftUauADmvTkSZ_BgmqaooAPApPuW9HUmVxPVujnWHzvEgNV9MHqzuqGlJDjyAJjMTXZIKagA9MFY4z3dWEZrYv8ksjrXzD71rbBK6qKD2iY2LawXPSgtU9k-c3JKf3pTkhdSIO2Ych7eUHfQy6SUSIae_Q-KWSgRYfRGLuHQdvHLf9398xyOoMXtx3QKRQAGMaOJEs4ZZxJ4H3MHTxWueguLBMJ2ZFqjtqiv87Fbc19JHQNe2_fN1_xk5lb1HzdoBR3w5YqEh98xu3s'
-        ],
-        'api-user-agent': [ 'Api-User-Agent', 'movie-hub (joseppaludo@gmail.com)' ],
+        'content-type': [ 'Content-Type', 'application/json' ],
         'user-agent': [ 'User-Agent', 'axios/1.6.8' ],
+        'content-length': [ 'Content-Length', '141' ],
         'accept-encoding': [ 'Accept-Encoding', 'gzip, compress, deflate, br' ],
         host: [ 'Host', 'www.wikidata.org' ]
       },
@@ -19182,9 +19718,10 @@ AxiosError: Request failed with status code 403
       [Symbol(kUniqueHeaders)]: null
     },
     data: {
-      error: 'rest-read-denied',
-      httpCode: 403,
-      httpReason: 'Forbidden'
+      error: 'invalid_request',
+      error_description: 'The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed.',
+      hint: 'Check the `grant_type` parameter',
+      message: 'The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed.'
     }
   }
 }

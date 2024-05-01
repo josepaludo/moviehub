@@ -17,5 +17,6 @@ app.get(ApiRoute.Genres, CONTROLLERS[ApiRoute.Genres])
 app.get(ApiRoute.MovieDetails, CONTROLLERS[ApiRoute.MovieDetails])
 app.get(ApiRoute.MoviesByGenre, CONTROLLERS[ApiRoute.MoviesByGenre])
 app.get(ApiRoute.Songs, CONTROLLERS[ApiRoute.Songs])
+app.get(ApiRoute.TestWiki, CONTROLLERS[ApiRoute.TestWiki])
 
 app.listen(env.PORT)

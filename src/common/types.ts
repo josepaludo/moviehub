@@ -158,6 +158,7 @@ export type TMovieInfo = {
     runtime: number;
     title: string;
     vote_average: number;
+    wikidata_id: string
 
     // homepage: string;
     // status: string;
@@ -170,3 +171,96 @@ export type TokenType = {
 }
 
 
+export type TArtistRaw = {
+    external_urls: {
+        spotify: string;
+    };
+    href: string;
+    id: string;
+    name: string;
+    type: string;
+    uri: string;
+};
+
+export type TImgRaw = {
+    height: number;
+    url: string;
+    width: number;
+};
+
+export type TAlbumRaw = {
+    album_type: string;
+    artists: TArtistRaw[];
+    available_markets: string[];
+    external_urls: {
+        spotify: string;
+    };
+    href: string;
+    id: string;
+    images: TImgRaw[];
+    name: string;
+    release_date: string;
+    release_date_precision: string;
+    total_tracks: number;
+    type: string;
+    uri: string;
+};
+
+export type TTrackRaw = {
+    album: TAlbumRaw;
+    artists: TArtistRaw[];
+    available_markets: string[];
+    disc_number: number;
+    duration_ms: number;
+    explicit: boolean;
+    external_ids: {
+        isrc: string;
+    };
+    external_urls: {
+        spotify: string;
+    };
+    href: string;
+    id: string;
+    is_local: boolean;
+    name: string;
+    popularity: number;
+    preview_url: string | null;
+    track_number: number;
+    type: string;
+    uri: string;
+};
+
+
+
+
+export type TAlbumImg = {
+    height: number;
+    url: string;
+    width: number;
+}
+
+export type TArtist = {
+    external_urls: {
+        spotify: string
+    }
+    name: string
+}
+
+export type TAlbum = {
+    external_urls: {
+        spotify: string;
+    };
+    images: Array<TAlbumImg>
+    release_date: string
+    name: string
+}
+
+export type TTrack = {
+    external_urls: {
+        spotify: string
+    }
+    artists: Array<TArtist>
+    album: TAlbum 
+    name: string
+    preview_url: string | null
+}
