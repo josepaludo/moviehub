@@ -33,7 +33,7 @@ export async function getSpotifyToken() {
             {
                 "grant_type": "client_credentials",
                 "client_id": env.CLIENT_ID,
-                "client_secret": env.CLIENTE_SECRET
+                "client_secret": env.CLIENT_SECRET
             },
             {
                 headers: {
