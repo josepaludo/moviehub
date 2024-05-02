@@ -7,6 +7,7 @@ const env = load({
     MOCK: Boolean,
     CLIENTE_SECRET: String,
     CLIENT_ID: String,
+    PRODUCTION: Boolean
 })
 
 export default env
