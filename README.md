@@ -1,7 +1,7 @@
 
 # MOVIEHUB
 
-This repo contains information on **MovieHub** as a fullstack application and hosts the backend source code. The frontend source code, however, can be seen [here](https://github.com/josepaludo/teste.git). 
+This repo contains information on **MovieHub** as a fullstack application and hosts the backend source code. The frontend source code, however, can be seen [here](https://github.com/josepaludo/moviehub-frontend.git). 
 
 ## Table of Contents
 
@@ -18,8 +18,8 @@ This repo contains information on **MovieHub** as a fullstack application and ho
 
 ## Step by step
 
-- Clone the repostory by running ```git clone https://github.com/josepaludo/node-api.git```
-- Then ```cd node-api``` to enter the cloned directory
+- Clone the repostory by running ```git clone https://github.com/josepaludo/moviehub.git```
+- Then ```cd moviehub``` to enter the cloned directory
 - Create a ```.env``` file with the following info:
     - TMDB_API_KEY | string | TMDB api key
     - PORT | number | Port used by the application. If not 3000, Dockerfile and compose.yml must be changed
@@ -46,4 +46,4 @@ After cloning the repository, there are two ways of running this application:
 
 With **MovieHub** Users can discover and search movies, find information on those movies and listen to samples of their soundtracks.
 
-This repo contains the code of the backend application. The code for the frontend application can be seen [here](https://github.com/josepaludo/teste.git).
+This repo contains the code of the backend. The code for the frontend can be seen [here](https://github.com/josepaludo/moviehub-frontend.git).
